@@ -1,0 +1,49 @@
+body {
+    .container {
+        .container_header {
+            .header_nav {
+
+                padding: 10px;
+
+                .row {
+                    .logo_nav{
+                        a{
+                            position: relative;
+                            display: inline-block;
+                        }
+                        .navbar-brand{
+                            .nav_logo_name{
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(50%, -50%); 
+                                margin: 0;
+                            }
+                        }
+                    }
+                    .header_nav_items {
+                        .navbar-nav {
+                            .nav-item {
+
+                                .nav_search{
+                                    cursor: pointer;
+                                }
+
+                                .nav-link{
+                                    padding: 0px;
+                                }
+                            }
+
+                            justify-content: right;
+
+                            li{
+                                margin-left: 10px;
+                                padding-top: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
