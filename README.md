@@ -11,5 +11,5 @@ Jadema es una plataforma de comercio electrónico especializada en la venta de c
  * PHP: Utilizamos PHP para el desarrollo del backend y la gestión de la lógica del negocio.
 
 # Equipo
- * Desarrollador principal: Tu Nombre
- * Diseñador de frontend: Nombre del Diseñador
+ * Desarrollador principal: Ower Castrillon
+ * Diseñador de frontend: Ower Castrillon
