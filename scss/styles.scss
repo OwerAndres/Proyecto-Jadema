@@ -4,41 +4,98 @@ body {
             .header_nav {
 
                 padding: 10px;
+                padding-left: 20px;
+                padding-right: 20px;
 
                 .row {
-                    .logo_nav{
-                        a{
+                    .logo_nav {
+                        a {
                             position: relative;
                             display: inline-block;
                         }
-                        .navbar-brand{
-                            .nav_logo_name{
+
+                        .navbar-brand {
+                            .nav_logo_name {
                                 position: absolute;
                                 top: 50%;
                                 left: 50%;
-                                transform: translate(50%, -50%); 
+                                transform: translate(50%, -50%);
                                 margin: 0;
                             }
                         }
                     }
+
                     .header_nav_items {
                         .navbar-nav {
                             .nav-item {
 
-                                .nav_search{
+                                .nav_search {
                                     cursor: pointer;
                                 }
 
-                                .nav-link{
+                                .nav-link {
                                     padding: 0px;
                                 }
                             }
 
                             justify-content: right;
 
-                            li{
+                            li {
                                 margin-left: 10px;
                                 padding-top: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .content {
+        .carousel {
+            .carousel-inner {
+                .carousel-item {
+                    height: 400px;
+                    background-color: red;
+                }
+            }
+
+            .carousel_tittle {
+                position: absolute;
+                top: 10%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                margin: 0;
+            }
+
+            .carousel_button_catalog {
+                .btn {
+                    box-shadow: 15px 5px 10px #48529944;
+                    border-radius: 18px;
+                }
+
+                position: absolute;
+                top: 90%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                margin: 0;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .carousel_infiniti {
+        .carousel {
+            .carousel-inner {
+                .carousel-item {
+                    .row {
+                        .col {
+                            .icon {
+                                margin-right: 10px;
                             }
                         }
                     }
