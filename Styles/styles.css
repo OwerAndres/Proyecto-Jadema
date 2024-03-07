@@ -1,3 +1,11 @@
+@keyframes Slider {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 body .container .container_header .header_nav {
   padding: 10px;
   padding-left: 20px;
@@ -27,27 +35,59 @@ body .container .container_header .header_nav .row .header_nav_items .navbar-nav
   margin-left: 10px;
   padding-top: 10px;
 }
-body .content .carousel .carousel-inner .carousel-item {
+body .container .content .carousel .carousel-inner .carousel-item {
   height: 400px;
   background-color: red;
 }
-body .content .carousel .carousel_button_catalog {
+body .container .content .carousel .carousel_button_catalog {
   position: absolute;
   top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
 }
-body .content .carousel .carousel_button_catalog .btn {
+body .container .content .carousel .carousel_button_catalog .btn {
   box-shadow: 15px 5px 10px rgba(72, 82, 153, 0.2666666667);
   border-radius: 18px;
 }
-body .content .carousel .carousel_button_catalog a {
+body .container .content .carousel .carousel_button_catalog a {
   text-decoration: none;
   color: white;
 }
-body .carousel_infiniti .carousel .carousel-inner .carousel-item .row .col .icon {
-  margin-right: 10px;
+body .container .content .logos {
+  overflow: hidden;
+  padding: 15px 0;
+  background-color: rgba(242, 242, 242, 0.9490196078);
+  white-space: nowrap;
+  position: relative;
+}
+body .container .content .logos:hover .logos_slider {
+  animation-play-state: paused;
+}
+body .container .content .logos:before,
+body .container .content .logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+body .container .content .logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+body .container .content .logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+body .container .content .logos_slider {
+  display: inline-block;
+  animation: 15s Slider infinite linear;
+}
+body .container .content .logos_slider img {
+  height: 40px;
+  margin: 0 90px;
 }
 
 /*# sourceMappingURL=styles.css.map */
