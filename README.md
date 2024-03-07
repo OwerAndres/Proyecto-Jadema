@@ -9,6 +9,7 @@ Jadema es una plataforma de comercio electrónico especializada en la venta de c
  * Bootstrap: Posiblemente utilicemos Bootstrap para agilizar el desarrollo y garantizar la compatibilidad multiplataforma.
  * JavaScript: Incorporamos interactividad y funcionalidades dinámicas en el lado del cliente utilizando JavaScript.
  * PHP: Utilizamos PHP para el desarrollo del backend y la gestión de la lógica del negocio.
+ * Node: Usaremos node para automatizar la compilacion de los archivos scss a archivos css
 
 # Equipo
  * Desarrollador principal: Ower Castrillon
