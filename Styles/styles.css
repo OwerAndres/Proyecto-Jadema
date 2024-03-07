@@ -31,13 +31,6 @@ body .content .carousel .carousel-inner .carousel-item {
   height: 400px;
   background-color: red;
 }
-body .content .carousel .carousel_tittle {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-}
 body .content .carousel .carousel_button_catalog {
   position: absolute;
   top: 90%;
