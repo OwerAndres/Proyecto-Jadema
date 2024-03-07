@@ -12,10 +12,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
     <!--Styles-->
     <link rel="stylesheet" href="Styles/styles.css">
 
-    
+    <!--Script-->
+    <script src="JS/index.js"></script>
+
     <link rel="icon" href="img/JademaIcon.png" type="image/x-icon">
     <title>Jadema</title>
 </head>
@@ -27,33 +30,98 @@
                 <div class="row">
                     <div class="col-6 logo_nav">
                         <a class="navbar-brand" href="index.html">
-                            <img src="img/JademaIcon.png" alt="Logo" width="35" height="35" class="d-inline-block align-top">
+                            <img src="img/JademaIcon.png" alt="Logo" width="35" height="35"
+                                class="d-inline-block align-top">
                             <p class="d-inline-block nav_logo_name">Jadema</p>
                         </a>
                     </div>
                     <div class="col-6 header_nav_items">
                         <div class="navbar-nav justify-content-right">
                             <li class="nav-item">
-                                <img src="icons/Search.svg" alt="Buscador" width="25" height="25" class="d-inline-block align-top nav_search">
+                                <img src="icons/Search.svg" alt="Buscador" width="25" height="25"
+                                    class="d-inline-block align-top nav_search">
                             </li>
                             <li class="nav-item">
                                 <span>|</span>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link"><img src="icons/Carrito.svg" alt="Carrito" width="25" height="25" class="d-inline-block align-top"></a>
+                                <a href="#" class="nav-link"><img src="icons/Carrito.svg" alt="Carrito" width="25"
+                                        height="25" class="d-inline-block align-top"></a>
                             </li>
                             <li class="nav-item">
                                 <span>|</span>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link"><img src="icons/Register.svg" alt="Usuario" width="25" height="25" class="d-inline-block align-top"></a>
+                                <a href="#" class="nav-link"><img src="icons/Register.svg" alt="Usuario" width="25"
+                                        height="25" class="d-inline-block align-top"></a>
                             </li>
                         </div>
                     </div>
                 </div>
             </nav>
-        </header>
-    </div>
-</body>
+        </header><!--Fin div.Container_header-->>
+        <!--Contenido Carrusel-->
+        <div class="content m-2">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/Banner camisetas.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="#" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="#" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
 
+                <!-- Botón "Catálogo" -->
+                <div class="text-center carousel_button_catalog">
+                    <button type="button" class="btn btn-primary"><a href="#">Catalogo</a></button>
+                </div>
+            </div>
+
+            <!--Productos-->
+            <div class="row m-2 card_products">
+                <div class="col-6 d-flex justify-content-center align-items-center">
+                    <div class="card card_products_1" style="width: 18rem;">
+                        <img src="img/Camisetas.png" class="card-img-top" alt="Camisetas">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Camisetas</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 d-flex justify-content-center align-items-center">
+                    <div class="card card_products_2" style="width: 18rem;">
+                        <img src="img/cropTops.png" class="card-img-top" alt="Cropt Tops">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Crop Tops</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Infite slider-->
+            <div class="m-2 logos">
+                <div class="logos_slider">
+                    <img src="icons/EstilosEnCadaDetalle.svg" alt="Diseño en Cada detalle">
+                    <img src="icons/DiseñpsUnicos.svg" alt="Diseños Paleta Colores">
+                    <img src="icons/ATuMedida.svg" alt="Medida">
+                </div>
+            </div>
+        </div><!--Fin div.content-->
+    </div><!--Fin div.Container-->
+
+    <script src="JS/index.js"></script>
+</body>
 </html>
