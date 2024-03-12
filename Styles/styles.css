@@ -17,10 +17,12 @@ body .container .container_header .header_nav .row .logo_nav a {
 }
 body .container .container_header .header_nav .row .logo_nav .navbar-brand .nav_logo_name {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 60%;
+  left: 5%;
   transform: translate(50%, -50%);
   margin: 0;
+  font-size: 25px;
+  font-family: "Mogra", sans-serif;
 }
 body .container .container_header .header_nav .row .header_nav_items .navbar-nav {
   justify-content: right;
@@ -49,37 +51,35 @@ body .container .content .carousel .carousel_button_catalog {
 body .container .content .carousel .carousel_button_catalog .btn {
   box-shadow: 15px 5px 10px rgba(72, 82, 153, 0.2666666667);
   border-radius: 18px;
+  background-color: rgb(117, 232, 220);
 }
 body .container .content .carousel .carousel_button_catalog a {
   text-decoration: none;
-  color: white;
+  color: #FCF9F9;
+  font-family: "Monomaniac One", sans-serif;
+  font-size: 20px;
+}
+body .container .content .card_products .card {
+  border-radius: 20px;
+}
+body .container .content .card_products .card img {
+  border-radius: 20px 20px 0 0;
+}
+body .container .content .card_products .card-body {
+  font-family: "Monomaniac One", sans-serif;
+}
+body .container .content .card_products .card-body h5 {
+  font-size: 30px;
 }
 body .container .content .logos {
   overflow: hidden;
   padding: 15px 0;
-  background-color: rgba(242, 242, 242, 0.9490196078);
+  background-color: #FCF9F9;
   white-space: nowrap;
   position: relative;
 }
 body .container .content .logos:hover .logos_slider {
   animation-play-state: paused;
-}
-body .container .content .logos:before,
-body .container .content .logos:after {
-  position: absolute;
-  top: 0;
-  width: 250px;
-  height: 100%;
-  content: "";
-  z-index: 2;
-}
-body .container .content .logos:before {
-  left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-}
-body .container .content .logos:after {
-  right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
 }
 body .container .content .logos_slider {
   display: inline-block;
@@ -88,6 +88,9 @@ body .container .content .logos_slider {
 body .container .content .logos_slider img {
   height: 40px;
   margin: 0 90px;
+}
+body .container .content .recomendados .card {
+  border-radius: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */
