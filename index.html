@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--Icon logo-->
+    <link rel="icon" href="img/JademaIcon.png" type="image/x-icon">
+
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -13,13 +16,29 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
+    <!--Fonts Mogran-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" rel="stylesheet">
+
+    <!--Fonts Monomaniac One-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mogra&family=Monomaniac+One&display=swap" rel="stylesheet">
+
+    <!--Fonts inter-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mogra&family=Monomaniac+One&display=swap"
+        rel="stylesheet">
+
     <!--Styles-->
     <link rel="stylesheet" href="Styles/styles.css">
 
     <!--Script-->
     <script src="JS/index.js"></script>
 
-    <link rel="icon" href="img/JademaIcon.png" type="image/x-icon">
     <title>Jadema</title>
 </head>
 
@@ -59,7 +78,7 @@
                     </div>
                 </div>
             </nav>
-        </header><!--Fin div.Container_header-->>
+        </header><!--Fin div.Container_header-->
         <!--Contenido Carrusel-->
         <div class="content m-2">
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -87,14 +106,14 @@
 
                 <!-- Botón "Catálogo" -->
                 <div class="text-center carousel_button_catalog">
-                    <button type="button" class="btn btn-primary"><a href="#">Catalogo</a></button>
+                    <button type="button" class="btn"><a href="#">Catalogo</a></button>
                 </div>
             </div>
 
             <!--Productos-->
-            <div class="row m-2 card_products">
+            <div class="row m-3 card_products">
                 <div class="col-6 d-flex justify-content-center align-items-center">
-                    <div class="card card_products_1" style="width: 18rem;">
+                    <div class="card card_products_1" style="width: 25rem;">
                         <img src="img/Camisetas.png" class="card-img-top" alt="Camisetas">
                         <div class="card-body text-center">
                             <h5 class="card-title">Camisetas</h5>
@@ -102,7 +121,7 @@
                     </div>
                 </div>
                 <div class="col-6 d-flex justify-content-center align-items-center">
-                    <div class="card card_products_2" style="width: 18rem;">
+                    <div class="card card_products_2" style="width: 25rem;">
                         <img src="img/cropTops.png" class="card-img-top" alt="Cropt Tops">
                         <div class="card-body text-center">
                             <h5 class="card-title">Crop Tops</h5>
@@ -112,16 +131,28 @@
             </div>
 
             <!--Infite slider-->
-            <div class="m-2 logos">
+            <div class="m-4 logos">
                 <div class="logos_slider">
                     <img src="icons/EstilosEnCadaDetalle.svg" alt="Diseño en Cada detalle">
                     <img src="icons/DiseñpsUnicos.svg" alt="Diseños Paleta Colores">
                     <img src="icons/ATuMedida.svg" alt="Medida">
                 </div>
             </div>
+
+            <!--Productos Recomendados-->
+            <div class="row recomendados">
+                <div class="col-6 d-flex justify-content-center align-items-center">
+                    <div class="card" style="width: 30rem; height: 30rem; display: flex; justify-content: center; align-items: center;">
+                        <img src="img/GenerationPhonk.png" class="card-img-top" alt="Camisetas">
+                    </div>
+                </div>
+            </div>
+            
+            
         </div><!--Fin div.content-->
     </div><!--Fin div.Container-->
 
     <script src="JS/index.js"></script>
 </body>
+
 </html>

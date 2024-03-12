@@ -1,3 +1,25 @@
+//Targetas
+$primary-color: #FCF9F9; //Blanco con una ligera tonalidad de gris
+
+//Textos dentro de targetas, textos informativos
+$secondary-color: #222222; //Gris muy oscuro, casi negro
+
+//Botones
+$boton-color: rgba(117, 232, 220, ); //Turquesa con 55% de opacidad
+
+//Footer
+$footer-color: #373F51; //Azul oscuro
+
+//Font Nombre 
+$font-nombre: 'Mogra', sans-serif; //Mogra fuente primaria, sans-serif como respaldo
+
+//Font Titulos, Subtitulos, Texto Botones, Texto Targetas
+$font-primary: 'Monomaniac One', sans-serif;
+
+//Font Precios
+$font-secondary: 'Inter', sans-serif;
+
+
 body {
 
     //Animacion slider para slider_infiniti
@@ -29,10 +51,12 @@ body {
                         .navbar-brand {
                             .nav_logo_name {
                                 position: absolute;
-                                top: 50%;
-                                left: 50%;
+                                top: 60%;
+                                left: 5%;
                                 transform: translate(50%, -50%);
                                 margin: 0;
+                                font-size: 25px;
+                                font-family: $font-nombre;
                             }
                         }
                     }
@@ -78,6 +102,7 @@ body {
                     .btn {
                         box-shadow: 15px 5px 10px #48529944;
                         border-radius: 18px;
+                        background-color: $boton-color;
                     }
 
                     position: absolute;
@@ -88,7 +113,27 @@ body {
 
                     a {
                         text-decoration: none;
-                        color: white;
+                        color: $primary-color;
+                        font-family: $font-primary;
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            //Targetas principales
+            .card_products {
+                .card {
+                    border-radius: 20px;
+                    img{
+                        border-radius: 20px 20px 0 0;
+                    }
+                }
+
+                .card-body {
+                    font-family: $font-primary;
+
+                    h5 {
+                        font-size: 30px;
                     }
                 }
             }
@@ -97,33 +142,13 @@ body {
             .logos {
                 overflow: hidden;
                 padding: 15px 0;
-                background-color: #f2f2f2f2;
+                background-color: $primary-color;
                 white-space: nowrap;
                 position: relative;
             }
 
             .logos:hover .logos_slider {
                 animation-play-state: paused;
-            }
-
-            .logos:before,
-            .logos:after {
-                position: absolute;
-                top: 0;
-                width: 250px;
-                height: 100%;
-                content: "";
-                z-index: 2;
-            }
-
-            .logos:before {
-                left: 0;
-                background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-            }
-
-            .logos:after {
-                right: 0;
-                background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
             }
 
             .logos_slider {
@@ -135,6 +160,12 @@ body {
                 height: 40px;
                 margin: 0 90px;
             }
-        }
-    }
-}
+
+            .recomendados{
+                .card {
+                    border-radius: 20px;
+                }
+            }
+        }//fin de contenct
+    }//fin de container
+}//fin de body
