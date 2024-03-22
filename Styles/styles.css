@@ -60,6 +60,7 @@ body .container .content .carousel .carousel_button_catalog a {
   font-size: 20px;
 }
 body .container .content .card_products .card {
+  cursor: pointer;
   border-radius: 20px;
 }
 body .container .content .card_products .card img {
@@ -70,6 +71,7 @@ body .container .content .card_products .card-body {
 }
 body .container .content .card_products .card-body h5 {
   font-size: 30px;
+  color: #222222;
 }
 body .container .content .logos {
   overflow: hidden;
@@ -89,8 +91,74 @@ body .container .content .logos_slider img {
   height: 40px;
   margin: 0 90px;
 }
-body .container .content .recomendados .card {
+body .container .content .recommended .card {
   border-radius: 20px;
+  background-color: #FCF9F9;
+  cursor: pointer;
+}
+body .container .content .recommended .recommended_row .card {
+  height: 40rem;
+}
+body .container .content .recommended .recommended_button {
+  transform: translate(-205%, -390%);
+}
+body .container .content .recommended .recommended_button .btn {
+  box-shadow: 15px 5px 10px rgba(72, 82, 153, 0.2666666667);
+  border-radius: 18px;
+  background-color: rgb(117, 232, 220);
+}
+body .container .content .recommended a {
+  text-decoration: none;
+  color: #FCF9F9;
+  font-family: "Monomaniac One", sans-serif;
+  font-size: 20px;
+}
+body .container .content .recommended .card-body {
+  margin-bottom: 0;
+  padding-right: 0;
+  transform: translate(-10%, -150%);
+}
+body .container .content .recommended .card-body h5 {
+  color: #222222;
+}
+body .container .content .recommended .card-body .recommended_title {
+  font-family: "Monomaniac One", sans-serif;
+  font-size: 30px;
+}
+body .container .content .recommended .card-body .recommended_subtitle {
+  font-family: "Monomaniac One", sans-serif;
+}
+body .container .content .recommended .col-6 .recommended_grid {
+  gap: 1rem;
+}
+body .container .content .recommended .col-6 .recommended_grid .col_1, body .container .content .recommended .col-6 .recommended_grid .col_2 {
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+body .container .content .recommended .col-6 .recommended_grid .card {
+  height: 19rem;
+  width: 15rem;
+}
+body .container .content .recommended .col-6 .recommended_grid .card .card-body {
+  padding-bottom: 0;
+  padding-right: 0;
+  transform: translate(0, -180%);
+}
+body .container .content .recommended .col-6 .recommended_grid .card .card-body .name_p_recommended {
+  font-size: 17px;
+  font-family: "Monomaniac One", sans-serif;
+}
+body .container .content .recommended .col-6 .recommended_grid .card .card-body .price_p_recommended {
+  font-size: 17px;
+  font-family: "Inter", sans-serif;
+}
+body .container .content .recommended .col-6 .recommended_grid img {
+  background-size: cover;
+  transform: translate(0, -20%);
+}
+body .container .content .sample_catalog .sample_catalog_title {
+  font-family: "Monomaniac One", sans-serif;
+  font-size: 35px;
 }
 
 /*# sourceMappingURL=styles.css.map */
