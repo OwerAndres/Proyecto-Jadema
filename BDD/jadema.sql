@@ -13,6 +13,7 @@ create table if not exists usuarios(
     pwd varchar(9) not null unique
 );
 
+
 /*Productos*/
 create table if not exists productos(
 	id int auto_increment primary key,
@@ -23,6 +24,17 @@ create table if not exists productos(
     categoria varchar(50) not null check(categoria in ('anime','phonk','autos','motos','japon')),
     talla varchar(40) not null check(talla in ('S','M','L','XL','XXL'))
 );
+
+/*Favoritos*/
+create table if not exists favoritos(
+	id int auto_increment primary key,
+    id_usuario int,
+    id_producto int
+);
+	/*Constrains*/
+	ALTER TABLE favoritos
+		ADD CONSTRAINT fk_favorito_usuario FOREIGN KEY (id_usuario) REFERENCES usuarios(id),
+		ADD CONSTRAINT fk_favorito_producto FOREIGN KEY (id_producto) REFERENCES productos(id);
 
 create table if not exists carrito(
 	id int auto_increment primary key,

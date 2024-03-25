@@ -125,7 +125,8 @@ body {
                 .card {
                     cursor: pointer;
                     border-radius: 20px;
-                    img{
+
+                    img {
                         border-radius: 20px 20px 0 0;
                     }
                 }
@@ -163,19 +164,22 @@ body {
                 margin: 0 90px;
             }
 
-            .recommended{
+            .recommended {
                 .card {
                     border-radius: 20px;
                     background-color: $primary-color;
                     cursor: pointer;
                 }
-                .recommended_row{
-                    .card{
+
+                .recommended_row {
+                    .card {
                         height: 40rem;
                     }
                 }
-                .recommended_button{
-                    transform: translate(-205%,-390%);
+
+                .recommended_button {
+                    transform: translate(-205%, -390%);
+
                     .btn {
                         box-shadow: 15px 5px 10px #48529944;
                         border-radius: 18px;
@@ -189,58 +193,112 @@ body {
                     font-family: $font-primary;
                     font-size: 20px;
                 }
-                .card-body{
+
+                .card-body {
                     margin-bottom: 0;
                     padding-right: 0;
                     transform: translate(-10%, -150%);
-                    h5{
+
+                    h5 {
                         color: $secondary-color;
                     }
-                    .recommended_title{
+
+                    .recommended_title {
                         font-family: $font-primary;
                         font-size: 30px;
                     }
-                    .recommended_subtitle{
+
+                    .recommended_subtitle {
                         font-family: $font-primary;
                     }
                 }
-                .col-6{
-                    .recommended_grid{
+
+                .col-6 {
+                    .recommended_grid {
                         gap: 1rem;
-                        .col_1, .col_2{
-                            margin-bottom:1rem;
+
+                        .col_1,
+                        .col_2 {
+                            margin-bottom: 1rem;
                             margin-top: 0.5rem;
                         }
-                        .card{
+
+                        .card {
                             height: 19rem;
                             width: 15rem;
-                            .card-body{
+
+                            .card-body {
                                 padding-bottom: 0;
                                 padding-right: 0;
                                 transform: translate(0, -180%);
-                                .name_p_recommended{
+
+                                .name_p_recommended {
                                     font-size: 17px;
                                     font-family: $font-primary;
                                 }
-                                .price_p_recommended{
+
+                                .price_p_recommended {
                                     font-size: 17px;
                                     font-family: $font-secondary;
                                 }
                             }
                         }
-                        img{
+
+                        img {
                             background-size: cover;
                             transform: translate(0, -20%);
                         }
                     }
                 }
             }//Fin de recommended
-            .sample_catalog{
-                .sample_catalog_title{
+
+            .sample_catalog {
+                .sample_catalog_title {
                     font-family: $font-primary;
                     font-size: 35px;
                 }
-            }
+                .sample_catalog_products{
+                    .card{
+                        height: 15rem;
+                        width: 15rem;
+                        cursor: pointer;
+                    }
+                    .card-body{
+                        padding-bottom: 0;
+                        padding: 0 0 0 0.5rem;
+                        transform: translate(0, -130%);
+                    }
+                    .name_p_recommended {
+                        font-size: 16px;
+                        font-family: $font-primary;
+                    }
+
+                    .price_p_recommended {
+                        font-size: 17px;
+                        font-family: $font-secondary;
+                    }
+
+                    img {
+                        background-size: cover;
+                        transform: translate(0, -20%);
+                    }
+                    .button_catalog {
+                        .btn {
+                            box-shadow: 15px 5px 10px #48529944;
+                            border-radius: 18px;
+                            background-color: $boton-color;
+                        }
+                        transform: translate(200%,0);
+                        margin-top: 1rem;
+                        a {
+                            text-decoration: none;
+                            color: $primary-color;
+                            font-family: $font-primary;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }//Fin de sample_catalog
         }//fin de contenct
     }//fin de container
 }//fin de body
