@@ -79,6 +79,7 @@
                 </div>
             </nav>
         </header><!--Fin div.Container_header-->
+
         <!--Contenido Carrusel-->
         <div class="content m-2">
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -140,15 +141,226 @@
             </div>
 
             <!--Productos Recomendados-->
-            <div class="row recomendados">
-                <div class="col-6 d-flex justify-content-center align-items-center">
-                    <div class="card" style="width: 30rem; height: 30rem; display: flex; justify-content: center; align-items: center;">
+            <div class="row recommended">
+                <div class="col-6 recommended_row d-flex justify-content-center align-items-center">
+                    <div class="card"
+                        style="width: 30rem; display: flex; justify-content: center; align-items: center;">
                         <img src="img/GenerationPhonk.png" class="card-img-top" alt="Camisetas">
+                        <div class="card-body text-right">
+                            <h5 class="recommended_title">Camisas estampadas en serigrafia</h5>
+                            <h5 class="recommended_subtitle">Diseños unicos</h5>
+                        </div>
+                        <div class="text-center recommended_button">
+                            <button type="button" class="btn"><a href="#">Comprar</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="row row-cols-2 recommended_grid">
+                        <div class="col col_1" style="width: 16rem;">
+                            <div class="card">
+                                <img src="img/GenerationPhonk.png" alt="Cropt Tops">
+                                <div class="card-body text-right">
+                                    <h5 class="card-title name_p_recommended" id="recommendedNameP1"
+                                        name="recommendedNameP1">Mariposa encamisa negra</h5>
+                                    <h5 class="card-subtitle price_p_recommended" id="recommendedPriceP1"
+                                        name="recommendedPriceP1">$15.000
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col_2" style="width: 16rem;">
+                            <div class="card" style="width: 15rem;">
+                                <img src="img/GenerationPhonk.png" class="card-img-top" alt="Cropt Tops">
+                                <div class="card-body text-right">
+                                    <h5 class="card-title name_p_recommended" id="recommendedNameP2"
+                                        name="recommendedNameP2">Crop Tops</h5>
+                                    <h5 class="card-subtitle price_p_recommended" id="recommendedPriceP2"
+                                        name="recommendedPriceP2">Hola</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col" style="width: 16rem;">
+                            <div class="card" style="width: 15rem;">
+                                <img src="img/GenerationPhonk.png" class="card-img-top" alt="Cropt Tops">
+                                <div class="card-body text-right">
+                                    <h5 class="card-title name_p_recommended" id="recommendedNameP3"
+                                        name="recommendedNameP3">Crop Tops</h5>
+                                    <h5 class="card-subtitle price_p_recommended" id="recommendedPriceP3"
+                                        name="recommendedPriceP3">Hola</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col" style="width: 16rem;">
+                            <div class="card" style="width: 15rem;">
+                                <img src="img/GenerationPhonk.png" class="card-img-top" alt="Cropt Tops">
+                                <div class="card-body text-right">
+                                    <h5 class="card-title name_p_recommended" id="recommendedNameP4"
+                                        name="recommendedNameP4">Crop Tops</h5>
+                                    <h5 class="card-subtitle price_p_recommended" id="recommendedPriceP4"
+                                        name="recommendedPriceP4">Hola</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--Fin div.recommended-->
+
+            <!--Muestra y recomendacion de catalogo-->
+            <div class="row m-5 sample_catalog">
+                <h1 class="sample_catalog_title text-center">Explora nuestra gran variedad de productos</h1>
+                <div class="row row-cols-5 m-2 sample_catalog_products">
+                    <div class="col">
+                        <div class="card m-2" style="width: 11rem;">
+                            <img src="img/GenerationPhonk.png" class="card-img-top" alt="Cropt Tops">
+                            <div class="card-body">
+                                <h5 class="card-title name_p_recommended" id="sample_catalog_nameP1">Mariposa en camisa
+                                    negra</h5>
+                                <h5 class="card-subtitle price_p_recommended" id="sample_catalog_priceP1">$15.000</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card m-2" style="width: 11rem;">
+                            <img src="img/GenerationPhonk.png" class="card-img-top" alt="Cropt Tops">
+                            <div class="card-body">
+                                <h5 class="card-title name_p_recommended" id="sample_catalog_nameP2">Mariposa en camisa
+                                    negra</h5>
+                                <h5 class="card-subtitle price_p_recommended" id="sample_catalog_priceP2">$15.000</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card m-2" style="width: 11rem;">
+                            <img src="img/GenerationPhonk.png" class="card-img-top" alt="Cropt Tops">
+                            <div class="card-body">
+                                <h5 class="card-title name_p_recommended" id="sample_catalog_nameP3">Mariposa en camisa
+                                    negra</h5>
+                                <h5 class="card-subtitle price_p_recommended" id="sample_catalog_priceP3">$15.000</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card m-2" style="width: 11rem;">
+                            <img src="img/GenerationPhonk.png" class="card-img-top" alt="Cropt Tops">
+                            <div class="card-body">
+                                <h5 class="card-title name_p_recommended" id="sample_catalog_nameP4">Mariposa en camisa
+                                    negra</h5>
+                                <h5 class="card-subtitle price_p_recommended" id="sample_catalog_priceP4">$15.000</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card m-2" style="width: 11rem;">
+                            <img src="img/GenerationPhonk.png" class="card-img-top" alt="Cropt Tops">
+                            <div class="card-body">
+                                <h5 class="card-title name_p_recommended" id="sample_catalog_nameP5">Mariposa en camisa
+                                    negra</h5>
+                                <h5 class="card-subtitle price_p_recommended" id="sample_catalog_priceP5">$15.000</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card m-2" style="width: 11rem;">
+                            <img src="img/GenerationPhonk.png" class="card-img-top" alt="Cropt Tops">
+                            <div class="card-body">
+                                <h5 class="card-title name_p_recommended" id="sample_catalog_nameP6">Mariposa en camisa
+                                    negra</h5>
+                                <h5 class="card-subtitle price_p_recommended" id="sample_catalog_priceP6">$15.000</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card m-2" style="width: 11rem;">
+                            <img src="img/GenerationPhonk.png" class="card-img-top" alt="Cropt Tops">
+                            <div class="card-body">
+                                <h5 class="card-title name_p_recommended" id="sample_catalog_nameP7">Mariposa en camisa
+                                    negra</h5>
+                                <h5 class="card-subtitle price_p_recommended" id="sample_catalog_priceP7">$15.000</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card m-2" style="width: 11rem;">
+                            <img src="img/GenerationPhonk.png" class="card-img-top" alt="Cropt Tops">
+                            <div class="card-body">
+                                <h5 class="card-title name_p_recommended" id="sample_catalog_nameP8">Mariposa en camisa
+                                    negra</h5>
+                                <h5 class="card-subtitle price_p_recommended" id="sample_catalog_priceP8">$15.000</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card m-2" style="width: 11rem;">
+                            <img src="img/GenerationPhonk.png" class="card-img-top" alt="Cropt Tops">
+                            <div class="card-body">
+                                <h5 class="card-title name_p_recommended" id="sample_catalog_nameP9">Mariposa en camisa
+                                    negra</h5>
+                                <h5 class="card-subtitle price_p_recommended" id="sample_catalog_priceP9">$15.000</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card m-2" style="width: 11rem;">
+                            <img src="img/GenerationPhonk.png" class="card-img-top" alt="Cropt Tops">
+                            <div class="card-body">
+                                <h5 class="card-title name_p_recommended" id="sample_catalog_nameP10">Mariposa en camisa
+                                    negra</h5>
+                                <h5 class="card-subtitle price_p_recommended" id="sample_catalog_priceP10">$15.000</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botón "Catálogo" -->
+                    <div class="text-center button_catalog">
+                        <button type="button" class="btn"><a href="#">Catalogo</a></button>
+                    </div>
+                </div>
+            </div><!--Fin de sample_catalog-->
+
+            <div class="row m-2 footer">
+                <div class="col-6">
+                    <div class="method-pay">
+                        <img src="icons/MasterCad.svg" alt="MasterCad">
+                        <img src="icons/Nequi.svg" alt="Nequi">
+                        <img src="icons/Paypal.svg" alt="Paypal">
+                        <img src="icons/Visa.svg" alt="Visa">
+                    </div>
+                    <div class="policies">
+                        <p>
+                            <a href="#">Privacidad y protección de datos</a>
+                            <span>|</span>
+                            <a href="#">Condiciones de uso</a>
+                            <span>|</span>
+                            <a href="#">Politica de cookies</a>
+                            <p class="copy">
+                                <span> 
+                                    &copy; 2024 Todos los derechos reservados <a href="https://github.com/OwerAndres">Ower Castrillon</a>
+                                </span>
+                            </p>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-6 d-flex">
+                    <div class="help">
+                        <h5>Ayuda</h5>
+                        <a href="#">Contactenos</a>
+                        <a href="#">Preguntas frecuentes</a>
+                        <a href="#">Sobre nosotros</a>
+                    </div>
+                    <div class="information">
+                        <h5>Informacion</h5>
+                        <p class="instagram">
+                            <img src="icons/Instagram Circle.svg" alt="Instagram">
+                            <a href="#">Jadema</a>
+                        </p>
+                        <p class="whatsapp">
+                            <img src="icons/whatsapp.svg" alt="whatsapp">
+                            <span>+57 301 258 55 39</span>
+                        </p>
                     </div>
                 </div>
             </div>
-            
-            
         </div><!--Fin div.content-->
     </div><!--Fin div.Container-->
 
