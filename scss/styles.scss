@@ -216,6 +216,7 @@ body {
                 .col-6 {
                     .recommended_grid {
                         gap: 1rem;
+                        padding-left: 2rem;
 
                         .col_1,
                         .col_2 {
@@ -262,6 +263,8 @@ body {
                         height: 15rem;
                         width: 15rem;
                         cursor: pointer;
+                        background-color: $primary-color;
+                        
                     }
                     .card-body{
                         padding-bottom: 0;
@@ -299,6 +302,55 @@ body {
                     }
                 }
             }//Fin de sample_catalog
+            .footer{
+                background-color: $footer-color;
+                width: 100%;
+                .method-pay{
+                    margin-top: 2rem;
+                    margin-bottom: 1rem;
+                }
+                a{
+                    text-decoration: none;
+                    color: $primary-color;
+                    font-family: $font-secondary;
+                    font-size: 13px;
+                }
+                span{
+                    color: $primary-color;
+                }
+                .copy{
+                    margin-top: -1rem;
+                    font-size: 13px;
+                }
+                .help h5{
+                    color: $primary-color;
+                    margin-top: 2rem;
+                    font-size: 20px;
+                }
+                .help{
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 5rem;
+                }
+
+                .information h5{
+                    color: $primary-color;
+                    margin-top: 2rem;
+                    font-size: 20px;
+                }
+
+                .information{
+                    margin-left: 5rem;
+                }
+                
+                .instagram a{
+                    font-size: 15px;
+                }
+
+                .whatsapp{
+                    margin-top: -1rem;
+                }
+            }
         }//fin de contenct
     }//fin de container
 }//fin de body

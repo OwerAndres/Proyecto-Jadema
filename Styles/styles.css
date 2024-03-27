@@ -130,6 +130,7 @@ body .container .content .recommended .card-body .recommended_subtitle {
 }
 body .container .content .recommended .col-6 .recommended_grid {
   gap: 1rem;
+  padding-left: 2rem;
 }
 body .container .content .recommended .col-6 .recommended_grid .col_1,
 body .container .content .recommended .col-6 .recommended_grid .col_2 {
@@ -165,6 +166,7 @@ body .container .content .sample_catalog .sample_catalog_products .card {
   height: 15rem;
   width: 15rem;
   cursor: pointer;
+  background-color: #FCF9F9;
 }
 body .container .content .sample_catalog .sample_catalog_products .card-body {
   padding-bottom: 0;
@@ -197,6 +199,51 @@ body .container .content .sample_catalog .sample_catalog_products .button_catalo
   color: #FCF9F9;
   font-family: "Monomaniac One", sans-serif;
   font-size: 20px;
+}
+body .container .content .footer {
+  background-color: #373F51;
+  width: 100%;
+}
+body .container .content .footer .method-pay {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+body .container .content .footer a {
+  text-decoration: none;
+  color: #FCF9F9;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+}
+body .container .content .footer span {
+  color: #FCF9F9;
+}
+body .container .content .footer .copy {
+  margin-top: -1rem;
+  font-size: 13px;
+}
+body .container .content .footer .help h5 {
+  color: #FCF9F9;
+  margin-top: 2rem;
+  font-size: 20px;
+}
+body .container .content .footer .help {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+}
+body .container .content .footer .information h5 {
+  color: #FCF9F9;
+  margin-top: 2rem;
+  font-size: 20px;
+}
+body .container .content .footer .information {
+  margin-left: 5rem;
+}
+body .container .content .footer .instagram a {
+  font-size: 15px;
+}
+body .container .content .footer .whatsapp {
+  margin-top: -1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
