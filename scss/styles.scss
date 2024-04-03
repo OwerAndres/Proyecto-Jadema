@@ -96,9 +96,7 @@ body {
                         }
                     }
                 }
-            }
-
-            //fin de container_header
+            }//fin de container_header
 
             //cuadro de sesion
             .sesion-show {
@@ -139,6 +137,7 @@ body {
                     }
 
                     .btn {
+                        box-shadow: 15px 5px 10px #48529944;
                         background-color: $boton-color;
                         font-family: $font-primary;
                         transform: translate(35%, -10%);
@@ -192,9 +191,8 @@ body {
                         outline: none;
                         border-color: $boton-color;
                     }
-                }
+                }//fin de sesion_form
 
-                //fin de sesion_form
                 .sesion_options {
                     .line {
                         border: 1px solid $secondary-color;
@@ -218,6 +216,7 @@ body {
 
                 .sesion_buttons {
                     .btn {
+                        box-shadow: 15px 5px 10px #48529944;
                         background-color: $secondary-color;
                         color: $primary-color;
                         width: 290px;
@@ -243,10 +242,13 @@ body {
                     border-radius: 52px;
                     font-family: $font-primary;
                     font-size: 14px;
+                    a{
+                        text-decoration: none;
+                        color: $primary-color;
+                        font-family: $font-primary;
+                    }
                 }
-            }
-
-            //fin de session
+            }//fin de session
 
             .content {
 
@@ -301,7 +303,7 @@ body {
                         }
                     }
                 }
-
+                
                 //Slider Inifiniti
                 .logos {
                     overflow: hidden;
@@ -326,7 +328,7 @@ body {
                 }
 
                 .recommended {
-                    .card {
+                    .card {             
                         border-radius: 20px;
                         background-color: $primary-color;
                         cursor: pointer;
@@ -412,9 +414,7 @@ body {
                             }
                         }
                     }
-                }
-
-                //Fin de recommended
+                }//Fin de recommended
 
                 .sample_catalog {
                     .sample_catalog_title {
@@ -470,12 +470,219 @@ body {
                             }
                         }
                     }
+                }//Fin de sample_catalog
+
+//------------------------------Fin de index---------------------
+
+//------------------------------Register-------------------------
+                .register{
+                    .row{
+                        .register_form {
+                            margin-bottom: 3rem;
+                            margin-top: 3rem;
+                            border: 2px solid $secondary-color;
+                            border-radius: 20px;
+                            margin-left: 2rem;
+                            padding-left: 2rem;
+                            
+                            .important{
+                                color: red;
+                            }
+                            .register_title{
+                                color: $secondary-color;
+                                font-family: $font-primary;
+                                font-size: 30px;
+                                transform: translate(-2%, -110%);
+                            }
+                            form {
+                                a {
+                                    text-decoration: none;
+                                    font-family: $font-primary;
+                                    font-size: 14px;
+                                }
+                            }
+                        
+                            .btn {
+                                box-shadow: 15px 5px 10px #48529944;
+                                margin-top: 2rem;
+                                background-color: $secondary-color;
+                                font-family: $font-primary;
+                                transform: translate(120%, -10%);
+                                width: 200px;
+                                font-size: 20px;
+                                color: $primary-color;
+                                margin-bottom: 2rem;
+                            }
+                        
+                            .form-group {
+                                position: relative;
+                                margin-bottom: 2rem;
+                            }
+                        
+                            .form-group label {
+                                position: absolute;
+                                bottom: 7px;
+                                left: 0;
+                                transition: all 0.3s ease;
+                                pointer-events: none;
+                                color: $secondary-color;
+                                font-family: $font-primary;
+                                transform: translateY(-20px);
+                                font-size: 14px; 
+                            }
+                        
+                            .form-group input:focus ~ label,
+                            .form-group input:not(:placeholder-shown) ~ label,
+                            .form-group textarea:focus ~ label,
+                            .form-group textarea:not(:placeholder-shown) ~ label {
+                                transform: translateY(-20px);
+                                font-size: 14px;
+                                color: $secondary-color;
+                            }
+                        
+                            .form-group input,
+                            .form-group textarea {
+                                width: 300px;
+                                border: none;
+                                border-bottom: 1px solid $secondary-color;
+                                padding: 5px 0;
+                                transition: border-color 0.3s ease;
+                                background-color: transparent;
+                            }
+
+                            .form-group-correo input,
+                            .form-group-user input{
+                                width: 700px;
+                            }
+                        
+                            .form-group input:focus,
+                            .form-group textarea:focus {
+                                outline: none;
+                                border-color: $boton-color;
+                            }
+
+                            .privacity_polite{
+                                transform: translate(52%, -120%);
+                                a{
+                                    color: $secondary-color;
+                                    font-family: $font-secondary;
+                                    font-size: 13px;
+                                }
+
+                            }
+                        }//fin register_fomr
+
+
+                        .login_sesion{
+                            padding-left: 2rem;
+                            border: 2px solid $secondary-color;
+                            height: 400px;
+                            width: 350px;
+                            margin-left: 2rem;
+                            margin-top: 3rem;
+                            border-radius: 20px;
+
+                            .login_title{
+                                color: $secondary-color;
+                                font-family: $font-primary;
+                                font-size: 30px;
+                                transform: translate(20%, -110%);
+                            }
+                            .sesion_form {
+                                form {
+                                    a {
+                                        text-decoration: none;
+                                        font-family: $font-primary;
+                                        font-size: 14px;
+                                    }
+                                }
+                                
+                                .btn {
+                                    box-shadow: 15px 5px 10px #48529944;
+                                    background-color: $secondary-color;
+                                    font-family: $font-primary;
+                                    width: 200px;
+                                    font-size: 20px;
+                                    color: $primary-color;
+                                    margin-bottom: 2rem;
+                                    transform: translate(20%, 0);
+                                }
+            
+                                .form-group {
+                                    position: relative;
+                                    margin-bottom: 20px;
+                                }
+            
+                                .form-group label {
+                                    position: absolute;
+                                    bottom: 7px;
+                                    left: 0;
+                                    transition: all 0.3s ease;
+                                    pointer-events: none;
+                                    color: $secondary-color;
+                                    font-family: $font-primary;
+                                }
+            
+                                .form-group input:focus~label,
+                                .form-group input:not(:placeholder-shown)~label,
+                                .form-group textarea:focus~label,
+                                .form-group textarea:not(:placeholder-shown)~label {
+                                    transform: translateY(-20px);
+                                    font-size: 14px;
+                                    color: $secondary-color;
+                                }
+            
+                                .form-group input,
+                                .form-group textarea {
+                                    width: 95%;
+                                    border: none;
+                                    border-bottom: 1px solid $secondary-color;
+                                    padding: 5px 0;
+                                    transition: border-color 0.3s ease;
+                                    background-color: transparent;
+                                }
+            
+                                .form-group input:focus,
+                                .form-group textarea:focus {
+                                    outline: none;
+                                    border-color: $boton-color;
+                                }
+                            }
+                            .sesion_buttons{
+                                text-align: center;
+                                .btn {
+                                    box-shadow: 15px 5px 10px #48529944;
+                                    background-color: $secondary-color;
+                                    color: $primary-color;
+                                    width: 280px;
+                                    text-align: left;
+                                    padding-left: 40px;
+                                    margin-bottom: 1rem;
+                                    border-radius: 52px;
+                                    font-family: $font-primary;
+            
+                                    img {
+                                        width: 25px;
+                                        height: 25px;
+                                        margin-right: 0.5rem;
+                                    }
+                                }
+                            }
+                            .sesion_options {
+                                text-align: center;
+                                margin-bottom: 2rem;
+                                margin-top: 2rem;
+                                .line {
+                                    border: 1px solid $secondary-color;
+                                    width: 95%;
+                                }
+                            }
+                        }//fin login sesion
+                    }
                 }
 
-                //Fin de sample_catalog
                 .footer {
                     background-color: $footer-color;
-                    width: 100%;
 
                     .method-pay {
                         margin-top: 2rem;
@@ -527,13 +734,7 @@ body {
                     .whatsapp {
                         margin-top: -1rem;
                     }
-                }
-            }
-
-            //fin de contenct
-        }
-
-        //fin de container
-    }
-
-    //fin de body
+                }//fin de footer
+            }//fin de contenct
+        }//fin de container
+}//fin de body
