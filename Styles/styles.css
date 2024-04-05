@@ -510,6 +510,126 @@ body .container .content .register .row .login_sesion .sesion_options .line {
   border: 1px solid #222222;
   width: 95%;
 }
+body .container .content .catalog .catalog_head {
+  justify-content: center;
+}
+body .container .content .catalog .catalog_head .catalog_title {
+  background-color: #222222;
+  width: 300px;
+  transform: translate(50%, 0);
+  margin-top: 2rem;
+}
+body .container .content .catalog .catalog_head .catalog_title h5 {
+  color: #FCF9F9;
+  font-family: "Monomaniac One", sans-serif;
+  font-size: 35px;
+  text-align: center;
+}
+body .container .content .catalog .catalog_filtre .filtre {
+  color: #222222;
+  font-family: "Monomaniac One", sans-serif;
+  width: 150px;
+  height: 30px;
+  font-size: 17x;
+  border-radius: 5px;
+  box-shadow: 15px 5px 10px rgba(72, 82, 153, 0.2666666667);
+  transform: translate(60%, 200%);
+}
+body .container .content .catalog .lineHead {
+  margin-top: 1rem;
+  width: 100%;
+  border: 1px solid #222222;
+}
+body .container .content .catalog .catalog_filtre2 h5 {
+  color: #222222;
+  font-family: "Monomaniac One", sans-serif;
+  text-align: left;
+  font-size: 27px;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+body .container .content .catalog .catalog_filtre2 .product_type h5 {
+  text-align: left;
+  font-family: "Monomaniac One", sans-serif;
+  font-size: 20px;
+  color: #222222;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+body .container .content .catalog .catalog_filtre2 .product_type .product_type_checkbox input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+}
+body .container .content .catalog .catalog_filtre2 .product_type .product_type_checkbox .textContent_check {
+  margin-left: 0.5rem;
+  transform: translate(0, -10%);
+  color: #222222;
+  font-family: "Monomaniac One", sans-serif;
+}
+body .container .content .catalog .catalog_filtre2 .product_type .product_type_checkbox .check_product {
+  display: flex;
+  margin-bottom: 1rem;
+}
+body .container .content .catalog .catalog_filtre2 .price_product h5 {
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  opacity: 0.9;
+  font-size: 20px;
+}
+body .container .content .catalog .catalog_filtre2 .price_product input[type=range] {
+  height: 1px;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+body .container .content .catalog .catalog_filtre2 .price_product .text_price {
+  justify-content: space-between;
+}
+body .container .content .catalog .catalog_filtre2 .price_product .text_price p {
+  color: #222222;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+}
+body .container .content .catalog .catalog_filtre2 .color_product h5 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+  font-size: 20px;
+}
+body .container .content .catalog .catalog_filtre2 .color_product input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+}
+body .container .content .catalog .catalog_filtre2 .color_product .textContent_check {
+  margin-left: 0.5rem;
+  transform: translate(0, -10%);
+  color: #222222;
+  font-family: "Monomaniac One", sans-serif;
+}
+body .container .content .catalog .catalog_filtre2 .color_product .check_product {
+  display: flex;
+  margin-bottom: 1rem;
+}
+body .container .content .catalog .catalog_filtre2 .category_product h5 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+  font-size: 20px;
+}
+body .container .content .catalog .catalog_filtre2 .category_product input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+}
+body .container .content .catalog .catalog_filtre2 .category_product .textContent_check {
+  margin-left: 0.5rem;
+  transform: translate(0, -10%);
+  color: #222222;
+  font-family: "Monomaniac One", sans-serif;
+}
+body .container .content .catalog .catalog_filtre2 .category_product .check_product {
+  display: flex;
+  margin-bottom: 1rem;
+}
 body .container .content .footer {
   background-color: #373F51;
 }

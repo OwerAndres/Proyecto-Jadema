@@ -472,9 +472,9 @@ body {
                     }
                 }//Fin de sample_catalog
 
-//------------------------------Fin de index---------------------
+                //------------------------------Fin de index---------------------
 
-//------------------------------Register-------------------------
+                //------------------------------Register-------------------------
                 .register{
                     .row{
                         .register_form {
@@ -681,6 +681,160 @@ body {
                     }
                 }
 
+                //----------------------Fin de sesion----------------------------------------
+
+                //----------------------Catalogo--------------------------------------------
+                .catalog{
+                    .catalog_head{
+                        justify-content: center;
+                        .catalog_title{
+                            background-color: $secondary-color;
+                            width: 300px;
+                            transform: translate(50%, 0);
+                            margin-top: 2rem;
+                            h5{
+                                color: $primary-color;
+                                font-family: $font-primary;
+                                font-size: 35px;
+                                text-align: center;
+                            }
+    
+                        }
+                    }
+                    .catalog_filtre{
+                        .filtre{
+                            color: $secondary-color;
+                            font-family: $font-primary;
+                            width: 150px;
+                            height: 30px;
+                            font-size: 17x;
+                            border-radius: 5px;
+                            box-shadow: 15px 5px 10px #48529944;
+                            transform: translate(60%, 200%);
+                        }
+                    }
+                    .lineHead{
+                        margin-top: 1rem;
+                        width: 100%;
+                        border: 1px solid $secondary-color;
+                    }
+
+                    .catalog_filtre2{
+                        h5{
+                            color: $secondary-color;
+                            font-family: $font-primary;
+                            text-align: left;
+                            font-size: 27px;
+                            margin-top: 3rem;
+                            margin-bottom: 1rem;
+                        }
+                        .product_type{
+                           
+                            h5{
+                                text-align: left;
+                                font-family: $font-primary;
+                                font-size: 20px;
+                                color: $secondary-color;
+                                opacity: 0.9;
+                                margin-bottom: 1rem;
+                                margin-top: 0;
+                            }
+                            .product_type_checkbox{
+                                input[type="checkbox"]{
+                                    width: 20px;
+                                    height: 20px;
+                                }
+                                .textContent_check{
+                                    margin-left: 0.5rem;
+                                    transform: translate(0,-10%);
+                                    color: $secondary-color;
+                                    font-family: $font-primary;
+
+                                }
+                                .check_product{
+                                    display: flex;
+                                    margin-bottom: 1rem;
+                                }
+                            }
+                        }
+
+                        .price_product{
+                            h5{
+                                margin-top: 1rem;
+                                margin-bottom: 0.3rem;
+                                opacity: 0.9;
+                                font-size: 20px;
+                            }
+                            input[type="range"]{
+                                height: 1px;
+                                margin-bottom: 0.5rem;
+                                width: 100%;
+                            }
+                            .text_price{
+                                justify-content: space-between;
+                                p{
+                                    color: $secondary-color;
+                                    font-family: $font-secondary;
+                                    font-size: 13px;
+                                }
+                            } 
+                        }
+
+                        .color_product{
+                            h5{
+                                margin-top: 1rem;
+                                margin-bottom: 1rem;
+                                opacity: 0.9;
+                                font-size: 20px;  
+                            }
+                            
+                            input[type="checkbox"]{
+                                width: 20px;
+                                height: 20px;
+                            }
+                            .textContent_check{
+                                margin-left: 0.5rem;
+                                transform: translate(0,-10%);
+                                color: $secondary-color;
+                                font-family: $font-primary;
+                            }
+                            .check_product{
+                                display: flex;
+                                margin-bottom: 1rem;
+                            }
+
+                        }
+
+                        .category_product{
+                            
+                            h5{
+                                margin-top: 2rem;
+                                margin-bottom: 1rem;
+                                opacity: 0.9;
+                                font-size: 20px;  
+                            }
+
+                            input[type="checkbox"]{
+                                width: 20px;
+                                height: 20px;
+                            }
+                            
+                            .textContent_check{
+                                margin-left: 0.5rem;
+                                transform: translate(0,-10%);
+                                color: $secondary-color;
+                                font-family: $font-primary;
+                            }
+
+                            .check_product{
+                                display: flex;
+                                margin-bottom: 1rem;
+                            }
+                        }
+                    }
+                }      
+
+                //----------------------Footer-----------------------------------------------                
                 .footer {
                     background-color: $footer-color;
 

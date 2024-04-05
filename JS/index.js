@@ -1,3 +1,5 @@
+//------------------inicio de sesion---------------
+
 //Funcion cuadro inicio de sesion
 function boxSessionRemoveShow() {
     event.stopPropagation();
@@ -11,12 +13,25 @@ function boxSessionAddShow(event) {
     }
 }
 
+//----------------------Filtros pagina catalogo------------------
+
+window.addEventListener("load", function () {
+    const rangeOutput = document.getElementById("rangeOutput");
+    const rangeInput = document.getElementById("rangeInput");
+    rangeOutput.textContent = rangeInput.value;
+    rangeInput.addEventListener("input", (event) => {
+        rangeOutput.textContent = event.target.value;
+    });
+})
+
+//---------------------Slider infinito ------------------------------
+
 //Clone de infiniti slider
 var copy = document.querySelector(".logos_slider").cloneNode(true)
 document.querySelector(".logos").appendChild(copy)
 
 //Cuadro inicio de sesion
 var initSesion = document.getElementById("initSesion");
-initSesion.addEventListener("click",boxSessionRemoveShow);
-window.addEventListener("click",boxSessionAddShow);
+initSesion.addEventListener("click", boxSessionRemoveShow);
+window.addEventListener("click", boxSessionAddShow);
 
