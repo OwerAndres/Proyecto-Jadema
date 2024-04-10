@@ -630,6 +630,35 @@ body .container .content .catalog .catalog_filtre2 .category_product .check_prod
   display: flex;
   margin-bottom: 1rem;
 }
+body .container .content .catalog .catalog .catalog_products {
+  height: 2000px;
+}
+body .container .content .catalog .catalog .catalog_products .card {
+  border-radius: 20px;
+  background-color: #FCF9F9;
+  height: 330px;
+  cursor: pointer;
+  margin-top: 2rem !important;
+}
+body .container .content .catalog .catalog .catalog_products .card-img-top {
+  transform: translate(0, -10%);
+}
+body .container .content .catalog .catalog .catalog_products .card-body {
+  margin: 0;
+  padding: 0;
+  transform: translate(0, -100%);
+}
+body .container .content .catalog .catalog .catalog_products .card-body h5 {
+  color: #222222;
+}
+body .container .content .catalog .catalog .catalog_products .card-body .card_product_name {
+  font-family: "Monomaniac One", sans-serif;
+  font-size: 20px;
+}
+body .container .content .catalog .catalog .catalog_products .card-body .card_price {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+}
 body .container .content .footer {
   background-color: #373F51;
 }

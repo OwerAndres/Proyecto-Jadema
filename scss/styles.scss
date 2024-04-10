@@ -720,6 +720,7 @@ body {
                     }
 
                     .catalog_filtre2{
+                        
                         h5{
                             color: $secondary-color;
                             font-family: $font-primary;
@@ -831,6 +832,39 @@ body {
                                 margin-bottom: 1rem;
                             }
                         }
+                    }
+
+                    .catalog{
+                        .catalog_products{
+                            height: 2000px;
+                            .card {             
+                                border-radius: 20px;
+                                background-color: $primary-color;
+                                height: 330px;
+                                cursor: pointer;
+                                margin-top: 2rem !important;
+                            }
+                            .card-img-top{
+                                transform: translate(0, -10%);
+                            }
+                            .card-body{
+                                margin: 0;
+                                padding: 0;
+                                transform: translate(0, -100%);
+                                h5{
+                                    color: $secondary-color;
+                                }
+                                .card_product_name{
+                                    font-family: $font-primary;
+                                    font-size: 20px;
+                                }
+                                .card_price{
+                                    font-family: $font-secondary;
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                  
                     }
                 }      
 
