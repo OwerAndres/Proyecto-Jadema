@@ -11,7 +11,7 @@
     }
 
     function compApellidos($apellido) {
-        $expre = '/\d/'; //Comprobar que solo halla letras
+        $expre = '/^[a-zA-Z]+$/'; //Comprobar que solo halla letras
         if(preg_match($expre, $apellido)){
             return true;
         }else{
@@ -39,11 +39,11 @@
 
     function compPassword($password){
         /**Comprobar que la contraseañ sigue el siguiente patron
-         * -8 caracteres como minmo
+         * -8 caracteres como minmo maximo 12
          * -mayusculas y minusculas
          * -caracteres especiales
          */
-        $expre = '/^(?=.*[@_\.])(?=.*[a-z])(?=.*[A-Z]).{8,}$/';
+        $expre = '/^(?=.*\W)(?=.*[a-z])(?=.*[A-Z]).{8,12}$/';
         if(preg_match($expre, $password)){
             return true;
         }else{

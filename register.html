@@ -107,7 +107,7 @@
                                 </div>
                                 <div class="col-6 d-flex justify-content-left">
                                     <div class="form-group">
-                                        <input type="tel" name="telefono" id="telefono" required>
+                                        <input type="tel" name="telefono" id="telefono" placeholder="example: 6756489265" required>
                                         <label for="telefono">telefono<span class="important">*</span></label>
                                     </div>
                                 </div>
@@ -131,19 +131,27 @@
                             <div class="row">
                                 <div class="col-6 d-flex justify-content-left">
                                     <div class="form-group">
-                                        <input type="password" name="password" id="password" placeholder="contraseña 8 caracteres" required>
+                                        <input type="password" name="passwordR" id="passwordR" placeholder="contraseña 8 caracteres minimo" required><span class="viewPassword" id="viewPassword"><img class="eyeIcon" id="eyeIcon" src="icons/icons8-invisible-32.svg" alt="eye icon"></span>
                                         <label for="password">Contraseña<span class="important">*</span></label>
                                     </div>
                                 </div>
                                 <div class="col-6 d-flex justify-content-left">
                                     <div class="form-group">
-                                        <input type="password" name="password2" id="password2" placeholder="contraseña 8 caracteres" required>
+                                        <input type="password" name="password2R" id="password2R" placeholder="contraseña 8 caracteres minimo" required>
                                         <label for="password2">Repite tu contraseña<span class="important">*</span></label>
                                     </div>
                                 </div>
                             </div>
                             <div class="privacity_polite">
                                 <a href="#">Politica de Privacidad</a>
+                            </div>
+                            <div class="requisitPassword">
+                                <p>
+                                    - 8 caracteres minimo maximo 12<br>
+                                    - Mayusculas y minusculas<br>
+                                    - Almenos un caracter especial<br>
+                                    - Almenos un numero
+                                </p>                                      
                             </div>
                             <input type="submit" value="Crear cuenta" class="btn">
                         </form>

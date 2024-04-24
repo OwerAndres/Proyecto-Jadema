@@ -372,6 +372,11 @@ body .container .content .register .row .register_form .form-group {
   position: relative;
   margin-bottom: 2rem;
 }
+body .container .content .register .row .register_form .form-group .viewPassword img {
+  width: 20px;
+  transform: translate(-100%, 0);
+  cursor: pointer;
+}
 body .container .content .register .row .register_form .form-group label {
   position: absolute;
   bottom: 7px;
@@ -416,6 +421,21 @@ body .container .content .register .row .register_form .privacity_polite a {
   color: #222222;
   font-family: "Inter", sans-serif;
   font-size: 13px;
+}
+body .container .content .register .row .register_form .requisitPassword {
+  transform: translate(0, -75%);
+  width: 300px;
+}
+body .container .content .register .row .register_form .requisitPassword p {
+  font-size: 12px;
+  color: #222222;
+  font-family: "Monomaniac One", sans-serif;
+  opacity: 90%;
+  width: 300px;
+  margin: 0 0 0 0;
+}
+body .container .content .register .row .requisitPassword p {
+  font-size: 8px;
 }
 body .container .content .register .row .login_sesion {
   padding-left: 2rem;

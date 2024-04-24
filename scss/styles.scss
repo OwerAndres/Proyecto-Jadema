@@ -5,7 +5,7 @@ $primary-color: #FCF9F9; //Blanco con una ligera tonalidad de gris
 $secondary-color: #222222; //Gris muy oscuro, casi negro
 
 //Botones
-$boton-color: rgba(117, 232, 220, ); //Turquesa con 55% de opacidad
+$boton-color: rgba(117, 232, 220); //Turquesa con 55% de opacidad
 
 //Footer
 $footer-color: #373F51; //Azul oscuro
@@ -485,6 +485,8 @@ body {
                             margin-left: 2rem;
                             padding-left: 2rem;
                             
+                
+
                             .important{
                                 color: red;
                             }
@@ -517,6 +519,13 @@ body {
                             .form-group {
                                 position: relative;
                                 margin-bottom: 2rem;
+                                .viewPassword{
+                                    img{
+                                        width: 20px;
+                                        transform: translate(-100%,0);
+                                        cursor: pointer;
+                                    }
+                                }
                             }
                         
                             .form-group label {
@@ -570,8 +579,26 @@ body {
                                 }
 
                             }
+                            .requisitPassword{
+                                transform: translate(0,-75%);
+                                width: 300px;
+                               p{
+                                font-size: 12px;
+                                color: $secondary-color;
+                                font-family: $font-primary;
+                                opacity: 90%;
+                                width: 300px;
+                                margin: 0 0 0 0;
+                               }
+                            }
+                
                         }//fin register_fomr
 
+                        .requisitPassword{
+                            p{
+                                font-size: 8px;
+                            }
+                        }
 
                         .login_sesion{
                             padding-left: 2rem;
