@@ -712,6 +712,17 @@ body {
 
                 //----------------------Catalogo--------------------------------------------
                 .catalog{
+                    .buttonVerMas{
+                        .btn{
+                            border: 0.5px solid $secondary-color;
+                            font-family: $font-primary;
+                            color: $primary-color;
+                            width: 300px;
+                            background-color: $boton-color;
+                            transform: translate(190%);
+                            margin-bottom: 2rem;
+                        }
+                    }
                     .catalog_head{
                         justify-content: center;
                         .catalog_title{
@@ -747,7 +758,22 @@ body {
                     }
 
                     .catalog_filtre2{
-                        
+                        .botones_filtros{
+                            padding-left: 0.5rem;
+                            .aplicarFiltros{
+                                margin-bottom: 1rem;
+                            }
+                            .limpiarFiltros{
+                                margin-bottom: 2rem;
+                            }
+                            .btn{
+                                color: $secondary-color;
+                                font-family: $font-primary;
+                                border: 1px solid $secondary-color;
+                                width: 150px;
+                                box-shadow: 15px 5px 10px #48529944;
+                            }
+                        }
                         h5{
                             color: $secondary-color;
                             font-family: $font-primary;
@@ -862,8 +888,13 @@ body {
                     }
 
                     .catalog{
+                        .heightAuto{
+                            height: auto !important;
+                        }
                         .catalog_products{
-                            height: 2000px;
+                            height: 1500px;
+                            overflow-y: hidden;
+
                             .card {             
                                 border-radius: 20px;
                                 background-color: $primary-color;

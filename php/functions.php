@@ -50,4 +50,13 @@
             return false;
         }
     }
+
+    function imprimir($select){
+        foreach ($select as $x) {
+            foreach ($x as $y) {
+                echo $y . " ";
+            }
+            echo "<br>";
+        }
+    }
 ?>

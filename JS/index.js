@@ -1,20 +1,4 @@
-//------------------Registro-----------------------
-//Funcion ver contraseña
-
-var img = document.getElementById("eyeIcon");
-var eyeIconClick = 0;
-function eyeIcon() {
-    eyeIconClick = eyeIconClick + 1;
-    if (eyeIconClick % 2 != 0) {
-        img.setAttribute("src", "icons/icons8-visible-32.svg");
-    } else {
-        img.setAttribute("src", "icons/icons8-invisible-32.svg")
-    }
-}
-
-
-
-//------------------inicio de sesion---------------
+//-----------------inicio de sesion---------------
 
 //Funcion cuadro inicio de sesion
 function boxSessionRemoveShow(e) {
@@ -56,22 +40,17 @@ function verificarSesion(event) {
     xhr.send('email=' + email + '&password=' + password);
 }
 
-//----------------------Filtros pagina catalogo------------------
 
-window.addEventListener("load", function () {
-    const rangeOutput = document.getElementById("rangeOutput");
-    const rangeInput = document.getElementById("rangeInput");
-    rangeOutput.textContent = rangeInput.value;
-    rangeInput.addEventListener("input", (event) => {
-        rangeOutput.textContent = event.target.value;
-    });
-})
+//------------------Registro-----------------------
+//Funcion ver contraseña
+function ventana() {
+    alert("hola");
+}
 
 //---------------------Slider infinito ------------------------------
-
 //Clone de infiniti slider
 var copy = document.querySelector(".logos_slider").cloneNode(true)
-document.querySelector(".logos").appendChild(copy)
+document.querySelector(".logos").appendChild(copy);
 
 //Cuadro inicio de sesion
 var initSesion = document.getElementById("initSesion");
@@ -82,4 +61,5 @@ window.addEventListener("click", boxSessionAddShow);
 document.getElementById("formSesion").addEventListener("submit", verificarSesion);
 
 //Mostrar password
-document.getElementById("eyeIcon").addEventListener("click", eyeIcon);
+var alerta = document.getElementById("eyeIcon");
+alerta.addEventListener("click", ventana);

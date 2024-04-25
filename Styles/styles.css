@@ -530,6 +530,15 @@ body .container .content .register .row .login_sesion .sesion_options .line {
   border: 1px solid #222222;
   width: 95%;
 }
+body .container .content .catalog .buttonVerMas .btn {
+  border: 0.5px solid #222222;
+  font-family: "Monomaniac One", sans-serif;
+  color: #FCF9F9;
+  width: 300px;
+  background-color: rgb(117, 232, 220);
+  transform: translate(190%);
+  margin-bottom: 2rem;
+}
 body .container .content .catalog .catalog_head {
   justify-content: center;
 }
@@ -559,6 +568,22 @@ body .container .content .catalog .lineHead {
   margin-top: 1rem;
   width: 100%;
   border: 1px solid #222222;
+}
+body .container .content .catalog .catalog_filtre2 .botones_filtros {
+  padding-left: 0.5rem;
+}
+body .container .content .catalog .catalog_filtre2 .botones_filtros .aplicarFiltros {
+  margin-bottom: 1rem;
+}
+body .container .content .catalog .catalog_filtre2 .botones_filtros .limpiarFiltros {
+  margin-bottom: 2rem;
+}
+body .container .content .catalog .catalog_filtre2 .botones_filtros .btn {
+  color: #222222;
+  font-family: "Monomaniac One", sans-serif;
+  border: 1px solid #222222;
+  width: 150px;
+  box-shadow: 15px 5px 10px rgba(72, 82, 153, 0.2666666667);
 }
 body .container .content .catalog .catalog_filtre2 h5 {
   color: #222222;
@@ -650,8 +675,12 @@ body .container .content .catalog .catalog_filtre2 .category_product .check_prod
   display: flex;
   margin-bottom: 1rem;
 }
+body .container .content .catalog .catalog .heightAuto {
+  height: auto !important;
+}
 body .container .content .catalog .catalog .catalog_products {
-  height: 2000px;
+  height: 1500px;
+  overflow-y: hidden;
 }
 body .container .content .catalog .catalog .catalog_products .card {
   border-radius: 20px;
