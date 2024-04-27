@@ -1,33 +1,83 @@
-//----------------Cargar productos----------------
-$(document).ready(function() {
+// Función para cargar productos 
+$(document).ready(function () {
+    cargarProductos();
+});
+
+// Función para cargar productos
+function cargarProductos() {
     $.ajax({
-        url: 'php/catalogo.php', // Ruta al archivo PHP que contiene la consulta
+        url: 'php/catalogo.php',
         type: 'GET',
-        dataType: 'json', 
-        success: function(response) {
-            response.forEach(function(producto) {
-                // Dividir la cadena de URL de imagen si hay más de una URL
-                var urls = producto.imgURL.split(" ");
-                var imgUrl = urls[0];
-
-                // Crear elementos HTML para la tarjeta de producto
-                var card = $('<div class="card m-2" style="width: 15rem;">');
-                var img = $('<img src="' + imgUrl + '" class="card-img-top" alt="Products">');
-                var cardBody = $('<div class="card-body">');
-                var title = $('<h5 class="card-title card_product_name" id="card_product_name">' + producto.nombre + '</h5>');
-                var price = $('<h5 class="card-subtitle card_price" id="card_price">$' + producto.precio + '</h5>');
-
-                card.append(img);
-                cardBody.append(title);
-                cardBody.append(price);
-                card.append(cardBody);
-
-                $('.catalog_products').append(card);
-            });
+        dataType: 'json',
+        success: function (response) {
+            mostrarProductos(response);
         },
-        error: function(xhr, status, error) {
-            console.error(error); 
+        error: function (xhr, status, error) {
+            console.error(error);
         }
+    });
+}
+
+//Mostrar productos en el catalogo
+function mostrarProductos(productos) {
+    $('.catalog_products').empty(); 
+
+    productos.forEach(function (producto) {
+        var urls = producto.imgURL.split(" ");
+        var imgUrl = urls[0];
+
+        var card = $('<div class="card m-2" style="width: 15rem;">');
+        var img = $('<img src="' + imgUrl + '" class="card-img-top" alt="Products">');
+        var cardBody = $('<div class="card-body">');
+        var title = $('<h5 class="card-title card_product_name" id="card_product_name">' + producto.nombre + '</h5>');
+        var price = $('<h5 class="card-subtitle card_price" id="card_price">$' + producto.precio + '</h5>');
+
+        card.append(img);
+        cardBody.append(title);
+        cardBody.append(price);
+        card.append(cardBody);
+
+        $('.catalog_products').append(card);
+    });
+}
+
+// Función para aplicar filtros
+window.addEventListener('load', function () {
+    const rangeOutput = document.getElementById("rangeOutput");
+    const rangeInput = document.getElementById("rangeInput");
+    rangeOutput.textContent = rangeInput.value;
+    rangeInput.addEventListener("input", (event) => {
+        rangeOutput.textContent = event.target.value;
+    });
+
+    document.getElementById('aplicarFiltros').addEventListener('click', function () {
+        var filtrosSelect = [];
+
+        var checkboxes = document.querySelectorAll('.check_product input[type="checkbox"]');
+        checkboxes.forEach(function (checkbox) {
+            if (checkbox.checked) {
+                filtrosSelect.push(checkbox.value);
+            }
+        });
+
+        var precio = rangeInput.value;
+        filtrosSelect.push('Precio: ' + precio);
+
+        // Envío de filtros por medio de fetch
+        fetch('php/catalogo.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ filtros: filtrosSelect })
+        })
+        .then(response => response.json())
+        .then(data => {
+            mostrarProductos(data);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
     });
 });
 
@@ -66,10 +116,48 @@ window.addEventListener("load", function () {
     });
 })
 
-//Funcion botonoes para aplicar todos los filtros 
-function prueba() {
-    alert("hola");
+
+//Funcion para limipiar filtros
+document.getElementById('limpiarFiltros').addEventListener('click', function () {
+    var checkboxes = document.querySelectorAll('.check_product input[type="checkbox"]');
+    checkboxes.forEach(function (checkbox) {
+        checkbox.checked = false;
+    });
+
+    rangeInput.value = rangeInput.getAttribute('min');
+    rangeOutput.textContent = rangeInput.value;
+
+    cargarProductos();
+});
+
+function cargarProductos() {
+    $.ajax({
+        url: 'php/catalogo.php',
+        type: 'GET',
+        dataType: 'json',
+        success: function (response) {
+            mostrarProductos(response);
+        },
+        error: function (xhr, status, error) {
+            console.error(error);
+        }
+    });
 }
+
+//-----------Filtro precio mayor o menor--------------------
+document.getElementById('ordenar').addEventListener('change', function () {
+    var orden = this.value;
+    fetch('php/catalogo.php?orden=' + orden)
+        .then(response => response.json())
+        .then(data => {
+            mostrarProductos(data);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+});
+
+
 
 
 //Cuadro inicio de sesion
@@ -79,10 +167,10 @@ window.addEventListener("click", boxSessionAddShow);
 
 //remove hidden catalog (Ver mas)
 var VerMasButton = document.getElementById("verMasButton");
-VerMasButton.addEventListener("click",removeHidden);
+VerMasButton.addEventListener("click", removeHidden);
 
-//Botones para aplicar todos los filtros seleccionados
-var btnAplicarFiltros = document.getElementById("aplicarFiltros");
-btnAplicarFiltros.addEventListener("click",prueba);
-var btnLimpiarFiltros = document.getElementById("limpiarFiltros");
-btnLimpiarFiltros.addEventListener("click",prueba);
+
+
+
+
+

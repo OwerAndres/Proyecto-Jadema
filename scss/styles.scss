@@ -714,13 +714,13 @@ body {
                 .catalog{
                     .buttonVerMas{
                         .btn{
-                            border: 0.5px solid $secondary-color;
                             font-family: $font-primary;
                             color: $primary-color;
                             width: 300px;
                             background-color: $boton-color;
                             transform: translate(190%);
                             margin-bottom: 2rem;
+                            box-shadow: 15px 5px 10px #48529944;
                         }
                     }
                     .catalog_head{

@@ -33,8 +33,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             } else {
                 $response["error"] = "Credenciales incorrectas";
             }
+
+            $conexionBD=null;
         } catch (PDOException $e) {
             $response["error"] = "Error: " . $e->getMessage();
+            die();
         }
     }
     echo json_encode($response);

@@ -531,13 +531,13 @@ body .container .content .register .row .login_sesion .sesion_options .line {
   width: 95%;
 }
 body .container .content .catalog .buttonVerMas .btn {
-  border: 0.5px solid #222222;
   font-family: "Monomaniac One", sans-serif;
   color: #FCF9F9;
   width: 300px;
   background-color: rgb(117, 232, 220);
   transform: translate(190%);
   margin-bottom: 2rem;
+  box-shadow: 15px 5px 10px rgba(72, 82, 153, 0.2666666667);
 }
 body .container .content .catalog .catalog_head {
   justify-content: center;
