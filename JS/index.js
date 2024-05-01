@@ -1,20 +1,19 @@
-//----------------Cargar productos en el mini catalogo
-// Función para cargar y mostrar productos
+// Función para cargar y mostrar productos en el grid de dos columnas en móvil
 function mostrarProductos(productos) {
     $('.sample_catalog_products').empty(); // Limpiar el contenedor de productos
 
     // Iterar sobre los primeros diez productos o menos si hay menos de diez
-    for (let i = 0; i < Math.min(productos.length, 10); i++) {
+    for (let i = 0; i < Math.min(productos.length, 12); i++) {
         const producto = productos[i];
         var urls = producto.imgURL.split(" ");
         var imgUrl = urls[0];
 
-        var card = $('<div class="col">');
+        var card = $('<div class="col-lg-2 col-md-3 col-sm-6 col-6 mb-3">'); // Ajustar las clases de columnas para PC y móvil
         var cardContent = $('<div class="card m-2" style="width: 11rem;">');
         var img = $('<img src="' + imgUrl + '" class="card-img-top" alt="Cropt Tops">');
         var cardBody = $('<div class="card-body">');
-        var title = $('<h5 class="card-title name_p_recommended" id="sample_catalog_nameP' + (i+1) + '">' + producto.nombre + '</h5>');
-        var price = $('<h5 class="card-subtitle price_p_recommended" id="sample_catalog_priceP' + (i+1) + '">$' + producto.precio + '</h5>');
+        var title = $('<h5 class="card-title name_p_recommended" id="sample_catalog_nameP' + (i + 1) + '">' + producto.nombre + '</h5>');
+        var price = $('<h5 class="card-subtitle price_p_recommended" id="sample_catalog_priceP' + (i + 1) + '">$' + producto.precio + '</h5>');
 
         cardBody.append(title);
         cardBody.append(price);
@@ -31,7 +30,6 @@ function mostrarProductos(productos) {
     $('.sample_catalog_products').append(buttonCatalog);
 }
 
-
 // Función cargar 10 productos
 function cargarProductos() {
     $.ajax({
@@ -39,7 +37,7 @@ function cargarProductos() {
         type: 'GET',
         dataType: 'json',
         success: function (response) {
-            mostrarProductos(response.slice(0, 10));
+            mostrarProductos(response.slice(0, 12));
         },
         error: function (xhr, status, error) {
             console.error(error);
@@ -47,10 +45,10 @@ function cargarProductos() {
     });
 }
 
-
 $(document).ready(function () {
     cargarProductos(); // Llama a la función para cargar los productos cuando el documento esté listo
 });
+
 
 //-----------------inicio de sesion---------------
 

@@ -172,9 +172,26 @@ body .container .sesion .sesion_register a {
   color: #FCF9F9;
   font-family: "Monomaniac One", sans-serif;
 }
+@media (max-width: 576px) {
+  body .container .content #carouselExampleAutoplaying .carousel-inner {
+    max-height: 150px;
+    overflow: hidden;
+  }
+}
+@media (max-width: 576px) {
+  body .container .content .carousel .carousel_button_catalog .btn {
+    padding: 0 0 !important;
+    padding-bottom: 4px !important;
+    width: 90px;
+  }
+  body .container .content .carousel .carousel_button_catalog .btn a {
+    font-size: 12px;
+    justify-content: center;
+    text-align: center;
+  }
+}
 body .container .content .carousel .carousel-inner .carousel-item {
   height: 400px;
-  background-color: red;
 }
 body .container .content .carousel .carousel_button_catalog {
   position: absolute;
@@ -230,6 +247,7 @@ body .container .content .recommended .card {
   border-radius: 20px;
   background-color: #FCF9F9;
   cursor: pointer;
+  height: 20rem;
 }
 body .container .content .recommended .recommended_row .card {
   height: 40rem;
@@ -256,6 +274,12 @@ body .container .content .recommended .card-body {
 body .container .content .recommended .card-body h5 {
   color: #222222;
 }
+body .container .content .recommended .card-body .name_p_recommended_1 {
+  transform: translate(0, -100%);
+}
+body .container .content .recommended .card-body .price_p_recommended_1 {
+  transform: translate(0, -100%);
+}
 body .container .content .recommended .card-body .recommended_title {
   font-family: "Monomaniac One", sans-serif;
   font-size: 30px;
@@ -263,39 +287,93 @@ body .container .content .recommended .card-body .recommended_title {
 body .container .content .recommended .card-body .recommended_subtitle {
   font-family: "Monomaniac One", sans-serif;
 }
-body .container .content .recommended .col-6 .recommended_grid {
+body .container .content .recommended .col-12 .recommended_grid {
   gap: 1rem;
   padding-left: 2rem;
 }
-body .container .content .recommended .col-6 .recommended_grid .col_1,
-body .container .content .recommended .col-6 .recommended_grid .col_2 {
+body .container .content .recommended .col-12 .recommended_grid .col_1,
+body .container .content .recommended .col-12 .recommended_grid .col_2 {
   margin-bottom: 1rem;
   margin-top: 0.5rem;
 }
-body .container .content .recommended .col-6 .recommended_grid .card {
+body .container .content .recommended .col-12 .recommended_grid .card {
   height: 19rem;
-  width: 15rem;
+  width: 16rem;
 }
-body .container .content .recommended .col-6 .recommended_grid .card .card-body {
+body .container .content .recommended .col-12 .recommended_grid .card .card-body {
   padding-bottom: 0;
   padding-right: 0;
   transform: translate(0, -180%);
 }
-body .container .content .recommended .col-6 .recommended_grid .card .card-body .name_p_recommended {
+body .container .content .recommended .col-12 .recommended_grid .card .card-body .name_p_recommended {
   font-size: 17px;
   font-family: "Monomaniac One", sans-serif;
 }
-body .container .content .recommended .col-6 .recommended_grid .card .card-body .price_p_recommended {
+body .container .content .recommended .col-12 .recommended_grid .card .card-body .price_p_recommended {
   font-size: 17px;
   font-family: "Inter", sans-serif;
 }
-body .container .content .recommended .col-6 .recommended_grid img {
+body .container .content .recommended .col-12 .recommended_grid img {
   background-size: cover;
   transform: translate(0, -20%);
+}
+@media (max-width: 767px) {
+  body .container .content .recommended .recommended_row {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  body .container .content .recommended .recommended_row .card_primary {
+    width: 100% !important;
+    margin: 0 auto;
+    height: 500px;
+  }
+  body .container .content .recommended .recommended_row .card_primary img {
+    transform: translate(0, -10%);
+  }
+  body .container .content .recommended .recommended_row .card_primary h5 {
+    text-align: left;
+    font-size: 20px;
+    transform: translate(0, -10%);
+  }
+  body .container .content .recommended .recommended_row .card_primary .btn {
+    transform: translate(90%, 90%);
+  }
+  body .container .content .recommended .recommended_row .col-6 {
+    width: 100%;
+  }
+  body .container .content .recommended .recommended_row .col-6:first-child {
+    margin-bottom: 1rem;
+  }
+  body .container .content .recommended .recommended_grid {
+    display: grid;
+    padding-left: 0.5rem !important;
+    padding-top: 1rem !important;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  body .container .content .recommended .recommended_grid .col {
+    margin: 0 !important;
+    width: 130px !important;
+  }
+  body .container .content .recommended .recommended_grid .card {
+    width: 140px !important;
+    height: 200px !important;
+  }
+  body .container .content .recommended .recommended_grid .card .name_p_recommended_1 {
+    transform: translate(0, 0);
+  }
+  body .container .content .recommended .recommended_grid .card .price_p_recommended_1 {
+    transform: translate(0, 0);
+  }
+  body .container .content .recommended .recommended_grid .card .card-body h5 {
+    transform: translate(0, 150%);
+  }
 }
 body .container .content .sample_catalog .sample_catalog_title {
   font-family: "Monomaniac One", sans-serif;
   font-size: 35px;
+  margin-top: 3rem;
 }
 body .container .content .sample_catalog .sample_catalog_products .card {
   height: 15rem;
@@ -321,7 +399,6 @@ body .container .content .sample_catalog .sample_catalog_products img {
   transform: translate(0, -20%);
 }
 body .container .content .sample_catalog .sample_catalog_products .button_catalog {
-  transform: translate(200%, 0);
   margin-top: 1rem;
 }
 body .container .content .sample_catalog .sample_catalog_products .button_catalog .btn {
@@ -334,6 +411,24 @@ body .container .content .sample_catalog .sample_catalog_products .button_catalo
   color: #FCF9F9;
   font-family: "Monomaniac One", sans-serif;
   font-size: 20px;
+}
+@media (max-width: 767px) {
+  body .container .content .sample_catalog .sample_catalog_products .card {
+    width: 150px !important;
+    height: 200px !important;
+  }
+  body .container .content .sample_catalog .sample_catalog_products .button_catalog {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 767px) {
+  body .container .content .sample_catalog .sample_catalog {
+    padding: 0 !important;
+  }
+  body .container .content .sample_catalog .sample_catalog_title {
+    font-size: 30px;
+  }
 }
 body .container .content .register .row .register_form {
   margin-bottom: 3rem;
@@ -738,6 +833,11 @@ body .container .content .footer .help {
   flex-direction: column;
   margin-left: 5rem;
 }
+@media (max-width: 767px) {
+  body .container .content .footer .help {
+    margin-left: 1rem;
+  }
+}
 body .container .content .footer .information h5 {
   color: #FCF9F9;
   margin-top: 2rem;
@@ -745,6 +845,11 @@ body .container .content .footer .information h5 {
 }
 body .container .content .footer .information {
   margin-left: 5rem;
+}
+@media (max-width: 767px) {
+  body .container .content .footer .information {
+    margin-left: 1rem;
+  }
 }
 body .container .content .footer .instagram a {
   font-size: 15px;

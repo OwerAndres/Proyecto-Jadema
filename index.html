@@ -45,40 +45,50 @@
 <body>
     <div class="container">
         <header class="container_header">
-            <nav class="header_nav avbar navbar-expand-lg bg-body-tertiary">
-                <div class="row">
-                    <div class="col-6 logo_nav">
-                        <a class="navbar-brand" href="index.html">
-                            <img src="img/JademaIcon.png" alt="Logo" width="35" height="35"
-                                class="d-inline-block align-top">
-                            <p class="d-inline-block nav_logo_name">Jadema</p>
-                        </a>
-                    </div>
-                    <div class="col-6 header_nav_items">
-                        <div class="navbar-nav justify-content-right">
+            <nav class="header_nav navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/JademaIcon.png" alt="Logo" width="35" height="35"
+                            class="d-inline-block align-top">
+                        <p class="d-inline-block nav_logo_name">Jadema</p>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <img src="icons/Search.svg" alt="Buscador" width="25" height="25"
-                                    class="d-inline-block align-top nav_search">
+                                <a class="nav-link" href="#">
+                                    <img src="icons/Search.svg" alt="Buscador" width="25" height="25"
+                                        class="d-inline-block align-top nav_search">
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <span>|</span>
+                                <span class="nav-link">|</span>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link"><img src="icons/Carrito.svg" alt="Carrito" width="25"
-                                        height="25" class="d-inline-block align-top"></a>
+                                <a class="nav-link" href="#">
+                                    <img src="icons/Carrito.svg" alt="Carrito" width="25" height="25"
+                                        class="d-inline-block align-top">
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <span>|</span>
+                                <span class="nav-link">|</span>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link" id="initSesion"><img src="icons/Register.svg" alt="Usuario"
-                                        width="25" height="25" class="d-inline-block align-top"></a>
+                                <a class="nav-link" href="#" id="initSesion">
+                                    <img src="icons/Register.svg" alt="Usuario" width="25" height="25"
+                                        class="d-inline-block align-top">
+                                </a>
                             </li>
-                        </div>
+                        </ul>
                     </div>
                 </div>
             </nav>
-        </header><!--Fin div.Container_header-->
+        </header>
+
+
 
         <div class="sesion sesion-show" id="sesion-show">
             <div class="sesion_icon">
@@ -125,10 +135,10 @@
                         <img src="img/Banner camisetas.png" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="#" class="d-block w-100" alt="...">
+                        <img src="img/banner2.png" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="#" class="d-block w-100" alt="...">
+                        <img src="img/banner3.png" class="d-block w-100" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
@@ -141,32 +151,35 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
-
+            
                 <!-- Botón "Catalogo" -->
                 <div class="text-center carousel_button_catalog">
                     <button type="button" class="btn"><a href="catalogo.html">Catálogo</a></button>
                 </div>
-            </div>
+            </div><!-- Fin de carrusel -->
+            
 
-            <!--Productos-->
+            <!-- Productos -->
             <div class="row m-3 card_products">
-                <div class="col-6 d-flex justify-content-center align-items-center">
-                    <div class="card card_products_1" style="width: 25rem;">
+                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                    <div class="card card_products_1 mb-3" style="width: 25rem;">
                         <img src="img/Camisetas.png" class="card-img-top" alt="Camisetas">
                         <div class="card-body text-center">
                             <h5 class="card-title">Camisetas</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 d-flex justify-content-center align-items-center">
-                    <div class="card card_products_2" style="width: 25rem;">
-                        <img src="img/cropTops.png" class="card-img-top" alt="Cropt Tops">
+                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                    <div class="card card_products_2 mb-3" style="width: 25rem;">
+                        <img src="img/cropTops.png" class="card-img-top" alt="Crop Tops">
                         <div class="card-body text-center">
                             <h5 class="card-title">Crop Tops</h5>
                         </div>
                     </div>
                 </div>
             </div>
+
+
 
             <!--Infite slider-->
             <div class="m-4 logos">
@@ -180,33 +193,35 @@
             <!--Productos Recomendados-->
             <div class="row recommended">
                 <div class="col-6 recommended_row d-flex justify-content-center align-items-center">
-                    <div class="card"
-                        style="width: 30rem; display: flex; justify-content: center; align-items: center;">
+                    <!--card principal grande-->
+                    <div class="card card_primary" style="width: 30rem; display: flex; justify-content: center; align-items: center;">
                         <img src="img/GenerationPhonk.png" class="card-img-top" alt="Camisetas">
                         <div class="card-body text-right">
                             <h5 class="recommended_title">Camisas estampadas en serigrafía</h5>
                             <h5 class="recommended_subtitle">Diseños unicos</h5>
                         </div>
                         <div class="text-center recommended_button">
-                            <button type="button" class="btn"><a href="#">Comprar</a></button>
+                            <button type="button" class="btn"><a href="catalogo.html">Comprar</a></button>
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <div class="row row-cols-2 recommended_grid">
-                        <div class="col col_1" style="width: 16rem;">
+                        <div class="col" style="width: 16rem;">
+                            <!--Card 1-->
                             <div class="card">
                                 <img src="img/imgProducts/butterflyMap_front.png" alt="Cropt Tops">
                                 <div class="card-body text-right">
-                                    <h5 class="card-title name_p_recommended" id="recommendedNameP1"
+                                    <h5 class="card-title name_p_recommended name_p_recommended_1" id="recommendedNameP1"
                                         name="recommendedNameP1">Butterfly Map</h5>
-                                    <h5 class="card-subtitle price_p_recommended" id="recommendedPriceP1"
+                                    <h5 class="card-subtitle price_p_recommended price_p_recommended_1" id="recommendedPriceP1"
                                         name="recommendedPriceP1">$19.000
                                     </h5>
                                 </div>
                             </div>
                         </div>
-                        <div class="col col_2" style="width: 16rem;">
+                        <div class="col" style="width: 16rem;">
+                            <!--card 2-->
                             <div class="card" style="width: 15rem;">
                                 <img src="img/imgProducts/rengoku_front.png" class="card-img-top" alt="Cropt Tops">
                                 <div class="card-body text-right">
@@ -218,6 +233,7 @@
                             </div>
                         </div>
                         <div class="col" style="width: 16rem;">
+                            <!--card 3-->
                             <div class="card" style="width: 15rem;">
                                 <img src="img/imgProducts/S100RR_front.png" class="card-img-top" alt="Cropt Tops">
                                 <div class="card-body text-right">
@@ -229,6 +245,7 @@
                             </div>
                         </div>
                         <div class="col" style="width: 16rem;">
+                            <!--card 4-->
                             <div class="card" style="width: 15rem;">
                                 <img src="img/imgProducts/smallDemon_crop.png" class="card-img-top" alt="Cropt Tops">
                                 <div class="card-body text-right">
@@ -243,15 +260,16 @@
                 </div>
             </div><!--Fin div.recommended-->
 
-            <!--Muestra y recomendacion de catalogo-->
-            <div class="row m-5 sample_catalog">
-                <h1 class="sample_catalog_title text-center">Explora nuestra gran variedad de productos</h1>
-                <div class="row row-cols-5 m-2 sample_catalog_products">
-                </div>
-            </div><!--Fin de sample_catalog-->
+<!--Muestra y recomendacion de catalogo-->
+<div class="row sample_catalog">
+    <h1 class="sample_catalog_title text-center">Explora nuestra gran variedad de productos</h1>
+    <div class="row sample_catalog_products">
+    </div>
+</div><!--Fin de sample_catalog-->
+
 
             <div class="row footer">
-                <div class="col-6">
+                <div class="col-md-6">
                     <div class="method-pay">
                         <img src="icons/MasterCad.svg" alt="MasterCad">
                         <img src="icons/Nequi.svg" alt="Nequi">
@@ -274,7 +292,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-6 d-flex">
+                <div class="col-md-6 d-flex">
                     <div class="help">
                         <h5>Ayuda</h5>
                         <a href="#">Contáctenos</a>
@@ -285,7 +303,8 @@
                         <h5>Información</h5>
                         <p class="instagram">
                             <img src="icons/Instagram Circle.svg" alt="Instagram">
-                            <a href="https://www.instagram.com/jadema.store?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Jadema</a>
+                            <a
+                                href="https://www.instagram.com/jadema.store?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Jadema</a>
                         </p>
                         <p class="whatsapp">
                             <img src="icons/whatsapp.svg" alt="whatsapp">
