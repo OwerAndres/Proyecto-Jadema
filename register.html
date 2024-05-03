@@ -43,36 +43,44 @@
 <body>
     <div class="container">
         <header class="container_header">
-            <nav class="header_nav avbar navbar-expand-lg bg-body-tertiary">
-                <div class="row">
-                    <div class="col-6 logo_nav">
-                        <a class="navbar-brand" href="index.html">
-                            <img src="img/JademaIcon.png" alt="Logo" width="35" height="35"
-                                class="d-inline-block align-top">
-                            <p class="d-inline-block nav_logo_name">Jadema</p>
-                        </a>
-                    </div>
-                    <div class="col-6 header_nav_items">
-                        <div class="navbar-nav justify-content-right">
+            <nav class="header_nav navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/JademaIcon.png" alt="Logo" width="35" height="35"
+                            class="d-inline-block align-top">
+                        <p class="d-inline-block nav_logo_name">Jadema</p>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <img src="icons/Search.svg" alt="Buscador" width="25" height="25"
-                                    class="d-inline-block align-top nav_search">
+                                <a class="nav-link" href="#">
+                                    <img src="icons/Search.svg" alt="Buscador" width="25" height="25"
+                                        class="d-inline-block align-top nav_search">
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <span>|</span>
+                                <span class="nav-link">|</span>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link"><img src="icons/Carrito.svg" alt="Carrito" width="25"
-                                        height="25" class="d-inline-block align-top"></a>
+                                <a class="nav-link" href="#">
+                                    <img src="icons/Carrito.svg" alt="Carrito" width="25" height="25"
+                                        class="d-inline-block align-top">
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <span>|</span>
+                                <span class="nav-link">|</span>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link" id="initSesion"><img src="icons/Register.svg" alt="Usuario"
-                                        width="25" height="25" class="d-inline-block align-top"></a>
+                                <a class="nav-link" href="#" id="initSesion">
+                                    <img src="icons/Register.svg" alt="Usuario" width="25" height="25"
+                                        class="d-inline-block align-top">
+                                </a>
                             </li>
-                        </div>
+                        </ul>
                     </div>
                 </div>
             </nav>
@@ -187,7 +195,7 @@
             </div>
 
             <div class="row footer">
-                <div class="col-6">
+                <div class="col-md-6">
                     <div class="method-pay">
                         <img src="icons/MasterCad.svg" alt="MasterCad">
                         <img src="icons/Nequi.svg" alt="Nequi">
@@ -204,14 +212,13 @@
                         <p class="copy">
                             <span>
                                 &copy; 2024 Todos los derechos reservados <a href="https://github.com/OwerAndres">Ower
-                                   Castrillón</a>
+                                    Castrillón</a>
                             </span>
                         </p>
                         </p>
                     </div>
                 </div>
-    
-                <div class="col-6 d-flex">
+                <div class="col-md-6 d-flex">
                     <div class="help">
                         <h5>Ayuda</h5>
                         <a href="#">Contáctenos</a>
@@ -222,7 +229,8 @@
                         <h5>Información</h5>
                         <p class="instagram">
                             <img src="icons/Instagram Circle.svg" alt="Instagram">
-                            <a href="https://www.instagram.com/jadema.store?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Jadema</a>
+                            <a
+                                href="https://www.instagram.com/jadema.store?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Jadema</a>
                         </p>
                         <p class="whatsapp">
                             <img src="icons/whatsapp.svg" alt="whatsapp">
