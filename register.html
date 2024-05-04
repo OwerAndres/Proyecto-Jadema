@@ -35,9 +35,6 @@
     <!--Styles-->
     <link rel="stylesheet" href="Styles/styles.css">
 
-    <!--Script-->
-    <script src="JS/index.js"></script>
-
     <title>Registro</title>
 </head>
 <body>
@@ -83,7 +80,7 @@
                         </ul>
                     </div>
                 </div>
-            </nav>
+            </nav><!--fin de header_nav-->
         </header><!--Fin div.Container_header-->
 
         <div class="content m-2">
@@ -91,7 +88,7 @@
                 <div class="row">
                     <div class="col-7 register_form">
                         <h5 class="register_title">Crea tu cuenta en jadema</h5>
-                        <form action="php/registro.php" method="POST">
+                        <form action="php/registro.php" id="form_register" method="POST">
                             <div class="row">
                                 <div class="col-6 d-flex justify-content-left">
                                     <div class="form-group">
@@ -192,7 +189,7 @@
                         </div>
                     </div><!--fin login_sesion-->
                 </div>
-            </div>
+            </div><!--fin de register-->
 
             <div class="row footer">
                 <div class="col-md-6">
@@ -239,8 +236,12 @@
                     </div>
                 </div>
             </div><!--Fin footer--> 
-        </div>
-    </div>
+        </div><!--fin de content-->
+    </div><!--fin de container-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="JS/index.js"></script>
+    <script src="JS/function.js"></script>
+    <script src="JS/register.js"></script>
 </body>
 </html>

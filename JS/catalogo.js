@@ -18,7 +18,17 @@ function cargarProductos() {
     });
 }
 
-//Mostrar productos en el catalogo
+// Función para formatear el precio con un punto manualmente
+function formatearPrecio(precio) {
+    var precioFormateado = precio.toString();
+    var longitud = precioFormateado.length;
+    if (longitud > 3) {
+        precioFormateado = precioFormateado.slice(0, longitud - 3) + '.' + precioFormateado.slice(longitud - 3);
+    }
+    return precioFormateado;
+}
+
+// Mostrar productos en el catalogo
 function mostrarProductos(productos) {
     $('.catalog_products').empty(); 
 
@@ -30,7 +40,8 @@ function mostrarProductos(productos) {
         var img = $('<img src="' + imgUrl + '" class="card-img-top" alt="Products">');
         var cardBody = $('<div class="card-body">');
         var title = $('<h5 class="card-title card_product_name" id="card_product_name">' + producto.nombre + '</h5>');
-        var price = $('<h5 class="card-subtitle card_price" id="card_price">$' + producto.precio + '</h5>');
+        var precioFormateado = formatearPrecio(producto.precio.toString());
+        var price = $('<h5 class="card-subtitle card_price" id="card_price">$' + precioFormateado + '</h5>');
 
         card.append(img);
         cardBody.append(title);
@@ -40,6 +51,7 @@ function mostrarProductos(productos) {
         $('.catalog_products').append(card);
     });
 }
+
 
 // Función para aplicar filtros
 window.addEventListener('load', function () {
@@ -157,8 +169,17 @@ document.getElementById('ordenar').addEventListener('change', function () {
         });
 });
 
+//-------------------Funcion nav bar
+window.addEventListener("load", function() {
+    var navbarToggler = document.querySelector(".navbar-toggler");
+    var navLinks = document.querySelectorAll(".navbar-nav .nav-item:nth-child(2), .navbar-nav .nav-item:nth-child(4)");
 
-
+    navbarToggler.addEventListener("click", function() {
+        navLinks.forEach(function(navLink) {
+            navLink.classList.toggle("d-none");
+        });
+    });
+});
 
 //Cuadro inicio de sesion
 var initSesion = document.getElementById("initSesion");

@@ -23,32 +23,32 @@ if ($nombre !== "" && $apellido1 !== "" && $telefono !== "" && $email !== "" && 
     }
 
     if (!compApellidos($apellido1)) {
-        echo "Introduce un apellido válido";
+        echo "En proceso";
         return;
     }
 
     if (!compTelefono($telefono)) {
-        echo "Introduce un número de teléfono válido";
+        echo "En proceso";
         return;
     }
 
     if (!compEmail($email)) {
-        echo "Introduce una dirección de correo válida";
+        echo "En proceso";
         return;
     }
 
     if (!compPassword($pwd) || !compPassword($pwd2)) {
-        echo "La contraseña debe incluir como mínimo 8 caracteres, un carácter especial (@, _, .) y tener al menos una mayúscula y una minúscula";
+        echo "En proceso";
         return;
     }
 
     if ($pwd !== $pwd2) {
-        echo "Las contraseñas no coinciden";
+        echo "En proceso";
         return;
     }
     
 } else {
-    echo "Ningún campo puede estar vacío";
+    echo "En proceso";
     return;
 }
 

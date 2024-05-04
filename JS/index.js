@@ -1,8 +1,18 @@
+// Función para formatear el precio con un punto manualmente
+function formatearPrecio(precio) {
+    var precioFormateado = precio.toString();
+    var longitud = precioFormateado.length;
+    if (longitud > 3) {
+        precioFormateado = precioFormateado.slice(0, longitud - 3) + '.' + precioFormateado.slice(longitud - 3);
+    }
+    return precioFormateado;
+}
+
 // Función para cargar y mostrar productos en el grid de dos columnas en móvil
 function mostrarProductos(productos) {
     $('.sample_catalog_products').empty(); // Limpiar el contenedor de productos
 
-    // Iterar sobre los primeros diez productos o menos si hay menos de diez
+    // Iterar sobre los primeros doce productos o menos si hay menos de doce
     for (let i = 0; i < Math.min(productos.length, 12); i++) {
         const producto = productos[i];
         var urls = producto.imgURL.split(" ");
@@ -13,7 +23,8 @@ function mostrarProductos(productos) {
         var img = $('<img src="' + imgUrl + '" class="card-img-top" alt="Cropt Tops">');
         var cardBody = $('<div class="card-body">');
         var title = $('<h5 class="card-title name_p_recommended" id="sample_catalog_nameP' + (i + 1) + '">' + producto.nombre + '</h5>');
-        var price = $('<h5 class="card-subtitle price_p_recommended" id="sample_catalog_priceP' + (i + 1) + '">$' + producto.precio + '</h5>');
+        var precioFormateado = formatearPrecio(producto.precio.toString());
+        var price = $('<h5 class="card-subtitle price_p_recommended" id="sample_catalog_priceP' + (i + 1) + '">$' + precioFormateado + '</h5>');
 
         cardBody.append(title);
         cardBody.append(price);
@@ -24,13 +35,14 @@ function mostrarProductos(productos) {
         $('.sample_catalog_products').append(card);
     }
 
+    // Agregar el botón "Catálogo"
     var buttonCatalog = $('<div class="text-center button_catalog">');
     var button = $('<button type="button" class="btn"><a href="catalogo.html">Catálogo</a></button>');
     buttonCatalog.append(button);
     $('.sample_catalog_products').append(buttonCatalog);
 }
 
-// Función cargar 10 productos
+// Función para cargar 12 productos
 function cargarProductos() {
     $.ajax({
         url: 'php/catalogo.php',
@@ -48,7 +60,6 @@ function cargarProductos() {
 $(document).ready(function () {
     cargarProductos(); // Llama a la función para cargar los productos cuando el documento esté listo
 });
-
 
 //-----------------inicio de sesion---------------
 
@@ -91,6 +102,19 @@ function verificarSesion(event) {
     };
     xhr.send('email=' + email + '&password=' + password);
 }
+
+//-------------------Funcion nav bar
+window.addEventListener("load", function() {
+    var navbarToggler = document.querySelector(".navbar-toggler");
+    var navLinks = document.querySelectorAll(".navbar-nav .nav-item:nth-child(2), .navbar-nav .nav-item:nth-child(4)");
+
+    navbarToggler.addEventListener("click", function() {
+        navLinks.forEach(function(navLink) {
+            navLink.classList.toggle("d-none");
+        });
+    });
+});
+
 
 
 //---------------------Slider infinito ------------------------------

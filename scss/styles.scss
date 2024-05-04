@@ -75,12 +75,41 @@ body {
                                 }
                             }
                         }
-
+                        .navbar-collapse{
+                            @media (max-width:500px) {
+                                position: absolute;
+                                transform: translateY(-50%);
+                                z-index: 1000;
+                                top: 170%;
+                                right: 0px;
+                                background-color: $primary-color;
+                                width: 5rem;
+                                padding-right: 1rem;
+                                border-radius: 0px 0px 0px 10px;
+                            }
+                            @media (max-width:768px) and (min-width:768px){
+                                position: absolute;
+                                transform: translateY(-50%);
+                                z-index: 1000;
+                                top: 170%;
+                                right: 0px;
+                                background-color: $primary-color;
+                                width: 5rem;
+                                padding-right: 1rem;
+                                border-radius: 0px 0px 0px 10px;
+                            }
+                            .navbar-nav{
+                                .nav-item{
+                                    a{
+                                        text-align: right;
+                                    }
+                                }
+                            }
+                        }
                         //Elementos del nav
                         .header_nav_items {
                             .navbar-nav {
                                 .nav-item {
-
                                     .nav_search {
                                         cursor: pointer;
                                     }
@@ -98,7 +127,9 @@ body {
                                 }
                             }
                         }
+
                     }
+
                 }
             }//fin de container_header
 
@@ -218,6 +249,10 @@ body {
 
                     h5 {
                         transform: translate(32%, -110%);
+                        @media (max-width:500px) {
+                            width: 130px;
+                            transform: translate(110px, -25px) !important;
+                        }
                     }
 
                     .line1 {
@@ -663,6 +698,7 @@ body {
 
                             
                             margin-top: 1rem;
+                            margin-bottom: 2rem;
 
                             a {
                                 text-decoration: none;
@@ -712,7 +748,10 @@ body {
                                 margin-left: 0;
                                 width: auto;
                             }
-
+                            @media (min-width:600px) and (max-width:770px){
+                                margin-left: 0rem;
+                                width: 100%;
+                            }
                             //media queris para movil
                             @media (max-width: 500px) {
                                 .row > div {
@@ -752,6 +791,9 @@ body {
 
                                 @media (max-width: 500px){
                                     transform: translate(30%, -10%);
+                                }
+                                @media (min-width:600px) and (max-width:770px){
+                                    transform: translate(110%,-10%);
                                 }
                             }
                         
@@ -796,6 +838,10 @@ body {
                                 padding: 5px 0;
                                 transition: border-color 0.3s ease;
                                 background-color: transparent;
+                                @media (min-width:600px) and (max-width:770px){
+                                    width: 290px;
+                                }
+                                
                             }
 
                             .form-group-correo input,
@@ -805,6 +851,11 @@ body {
                                 //Media queris para movil
                                 @media (max-width: 500px){
                                     width: 300px;
+                                }
+
+                                 
+                                @media (min-width:600px) and (max-width:770px){
+                                    width: 640px;
                                 }
                             }
                         
@@ -826,6 +877,11 @@ body {
                                 @media (max-width:500px) {
                                     width: 150px;
                                     transform: translate(160px, -35px)
+                                }
+
+                                @media (min-width:600px) and (max-width:770px){
+                                    width: 150px;
+                                    transform: translate(340px, -35px)
                                 }
                             }
                             .requisitPassword{
@@ -862,7 +918,10 @@ body {
                                 margin-left: 0.5rem;
                                 margin-bottom: 2rem;
                             }
-                            
+                            @media (min-width:600px) and (max-width:770px){
+                                transform: translate(150px, 0px);
+                                margin-bottom: 2rem;
+                            }
 
                             .login_title{
                                 color: $secondary-color;
@@ -972,6 +1031,9 @@ body {
 
                 //----------------------Catalogo--------------------------------------------
                 .catalog{
+                    @media (max-width:500px) {
+                        padding-right: 0rem;
+                    }
                     .buttonVerMas{
                         .btn{
                             font-family: $font-primary;
@@ -981,6 +1043,16 @@ body {
                             transform: translate(190%);
                             margin-bottom: 2rem;
                             box-shadow: 15px 5px 10px #48529944;
+                            //movil
+                            @media (max-width:500px){
+                                transform: translate(10%,0%);
+                                margin-top: 2rem;
+                            }
+                            //tablet
+                            @media (min-width:600px) and (max-width:770px) {
+                                transform: translate(90%, 0%);
+                                margin-top: 2rem;
+                            }
                         }
                     }
                     .catalog_head{
@@ -990,6 +1062,14 @@ body {
                             width: 300px;
                             transform: translate(50%, 0);
                             margin-top: 2rem;
+                            //movil
+                            @media (max-width:500px){
+                                transform: translate(20%, 0);
+                            }
+                            //tablet
+                            @media (min-width:600px) and (max-width:770px){
+                                transform: translate(30%, 0);
+                            }
                             h5{
                                 color: $primary-color;
                                 font-family: $font-primary;
@@ -1009,6 +1089,14 @@ body {
                             border-radius: 5px;
                             box-shadow: 15px 5px 10px #48529944;
                             transform: translate(60%, 200%);
+                            //movil
+                            @media (max-width:500px) {
+                                transform: translate(-20%, 340%);
+                            }
+                            //tablet
+                            @media (min-width:600px) and (max-width:770px) {
+                                transform: translate(10%, 350%);
+                            }
                         }
                     }
                     .lineHead{
@@ -1020,6 +1108,14 @@ body {
                     .catalog_filtre2{
                         .botones_filtros{
                             padding-left: 0.5rem;
+                            //tablet
+                            @media (min-width:600px) and (max-width:770px) {
+                                width: 130px;
+                            }
+                            //movil
+                            @media (max-width:500px) {
+                                width: 130px;
+                            }
                             .aplicarFiltros{
                                 margin-bottom: 1rem;
                             }
@@ -1041,6 +1137,10 @@ body {
                             font-size: 27px;
                             margin-top: 3rem;
                             margin-bottom: 1rem;
+                            //movil
+                            @media (max-width:500px) {
+                                width: 130px;
+                            }
                         }
                         .product_type{
                            
@@ -1052,6 +1152,10 @@ body {
                                 opacity: 0.9;
                                 margin-bottom: 1rem;
                                 margin-top: 0;
+                                //tablet
+                                @media (min-width:600px) and (max-width:770px) {
+                                    width: 130px;
+                                }
                             }
                             .product_type_checkbox{
                                 input[type="checkbox"]{
@@ -1063,16 +1167,23 @@ body {
                                     transform: translate(0,-10%);
                                     color: $secondary-color;
                                     font-family: $font-primary;
-
                                 }
                                 .check_product{
                                     display: flex;
                                     margin-bottom: 1rem;
+                                    //movil
+                                    @media (max-width:500px) {
+                                        width: 130px;
+                                    }
                                 }
                             }
                         }
 
                         .price_product{
+                            //tablet
+                            @media (min-width:600px) and (max-width:770px) {
+                                width: 130px;
+                            }
                             h5{
                                 margin-top: 1rem;
                                 margin-bottom: 0.3rem;
@@ -1083,9 +1194,17 @@ body {
                                 height: 1px;
                                 margin-bottom: 0.5rem;
                                 width: 100%;
+                                //movil
+                                @media (max-width:500px) {
+                                    width: 350%;
+                                }
                             }
                             .text_price{
                                 justify-content: space-between;
+                                //movil
+                                @media (max-width:500px) {
+                                    width: 130px;
+                                }
                                 p{
                                     color: $secondary-color;
                                     font-family: $font-secondary;
@@ -1154,13 +1273,25 @@ body {
                         .catalog_products{
                             height: 1500px;
                             overflow-y: hidden;
-
+                            //tablet
+                            @media (min-width: 600px) and (max-width:770px) {
+                                padding-left: 4rem;
+                                padding-top: 2rem;
+                            }
                             .card {             
                                 border-radius: 20px;
                                 background-color: $primary-color;
                                 height: 330px;
                                 cursor: pointer;
                                 margin-top: 2rem !important;
+                                //movil
+                                @media (max-width:500px) {
+                                    width: 12rem !important;
+                                    margin-left: 7rem !important;
+                                    margin-top: 4rem !important;
+                                    height: 250px;
+                                    margin-bottom: 0rem !important;
+                                }
                             }
                             .card-img-top{
                                 transform: translate(0, -10%);
@@ -1169,6 +1300,7 @@ body {
                                 margin: 0;
                                 padding: 0;
                                 transform: translate(0, -100%);
+                              
                                 h5{
                                     color: $secondary-color;
                                 }
@@ -1222,7 +1354,7 @@ body {
                         flex-direction: column;
                         margin-left: 5rem;
                     }
-
+                    //movil
                     @media (max-width: 767px){
                         .help{
                             margin-left: 1rem;
@@ -1244,11 +1376,13 @@ body {
                     .information {
                         margin-left: 5rem;
                     }
+                    //movil
                     @media (max-width: 767px){
                         .information{
                             margin-left: 1rem !important;
                         }
                     }
+                    //tablet
                     @media (max-width: 768px){
                         .information{
                             margin-left: 1rem !important;
