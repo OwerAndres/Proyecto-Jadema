@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Icon logo-->
+        <link rel="icon" href="img/JademaIcon.png" type="image/x-icon">
+
+        <!--Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+    
+        <!--Fonts Mogran-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" rel="stylesheet">
+    
+        <!--Fonts Monomaniac One-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mogra&family=Monomaniac+One&display=swap" rel="stylesheet">
+    
+        <!--Fonts inter-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mogra&family=Monomaniac+One&display=swap"
+            rel="stylesheet">
+    
+        <!--Styles-->
+        <link rel="stylesheet" href="Styles/styles.css">
+
+    <title>Catálogo</title>
+</head>
+<body>
+    <div class="container">
+        <header class="container_header">
+            <nav class="header_nav navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/JademaIcon.png" alt="Logo" width="35" height="35"
+                            class="d-inline-block align-top">
+                        <p class="d-inline-block nav_logo_name">Jadema</p>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="icons/Search.svg" alt="Buscador" width="25" height="25"
+                                        class="d-inline-block align-top nav_search">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <span class="nav-link">|</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="icons/Carrito.svg" alt="Carrito" width="25" height="25"
+                                        class="d-inline-block align-top">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <span class="nav-link">|</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" id="initSesion">
+                                    <img src="icons/Register.svg" alt="Usuario" width="25" height="25"
+                                        class="d-inline-block align-top">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav><!--fin de header_nav-->
+        </header><!--Fin div.Container_header-->
+
+        <div class="sesion sesion-show" id="sesion-show">
+            <div class="sesion_icon">
+                <img src="icons/profile-circle-svgrepo-com.svg" alt="perfil">
+            </div>
+            <h5>Identifícate</h5>
+            <div class="sesion_form">
+                <form action="php/initSesion.php" method="POST" id="formSesion">
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" required>
+                        <label for="email">Correo</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" id="password" required>
+                        <label for="password">Contraseña</label>
+                    </div>
+                    <div class="form-group-a">
+                        <a href="#">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <input type="submit" value="Inciar sesión" class="btn">
+                </form>
+            </div>
+            <div class="sesion_options">
+                <div class="line line1"></div>
+                <h5>Inicia sesión con</h5>
+                <div class="line line2"></div>
+            </div>
+            <div class="sesion_buttons">
+                <button class="btn btnGoogle"><img src="icons/Google__G__logo 1.svg" alt="icon google">Iniciar sesión
+                    con google</button>
+                <button class="btn btnFacebook"><img src="icons/icon_facebook.svg" alt="icon facebook">Iniciar sesión
+                    con facebook</button>
+            </div>
+            <button class="btn sesion_register">
+                <a href="register.html">¿No estas registrado? Click aquí</a>
+            </button>
+        </div><!--Fin sesion-->
+
+        <div class="content">
+            <div class="row catalog">
+                <div class="col-9 d-flex catalog_head">
+                    <div class="catalog_title">
+                        <h5>
+                            Catálogo
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-3 d-flex catalog_filtre">
+                    <select class="filtre" name="ordenar" id="ordenar">
+                        <option value="" selected disabled>Ordenar por</option>
+                        <option value="precioMayor">Mayor precio</option>
+                        <option value="precioMenor">Menor precio</option>
+                    </select>
+                </div>
+                <div class="lineHead"></div>
+                <div class="row">
+                    <div class="col-2 catalog_filtre2">
+                        <h5>Filtros</h5>
+                        <div class="row botones_filtros">
+                            <button class="btn aplicarFiltros" id="aplicarFiltros">Aplicar Filtros</button>
+                            <button class="btn limpiarFiltros" id="limpiarFiltros">Limpiar Filtros</button>
+                        </div>
+                        <div class="product_type">
+                            <h5>Tipo de producto</h5>
+                            <div class="product_type_checkbox">
+                                <div class="check_product">
+                                    <input type="checkbox" name="camiseta" id="camiseta" value="camiseta"><span class="textContent_check">Camisetas</span>
+                                </div>
+                                <div class="check_product">
+                                    <input type="checkbox" name="cropTops" id="cropTops" value="crop tops"><span class="textContent_check">Crop Tops</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price_product">
+                            <h5>Precio</h5>
+                            <input id="rangeInput" type="range" min="6000" max="20000" step="100" />
+                            <div class="d-flex text_price">
+                                <p>$6000 </p>
+                                <p>$<output id="rangeOutput"></output></p>
+                            </div>
+                        </div>
+                        <div class="color_product">
+                            <h5>Color</h5>
+                            <div class="check_product">
+                                <input type="checkbox" name="filNegro" id="filNegro" value="negro"><span class="textContent_check">Negro</span>
+                            </div>
+                            <div class="check_product">
+                                <input type="checkbox" name="filBlanco" id="filBlanco" value="blanco"><span class="textContent_check">Blanco</span>
+                            </div>
+                        </div>
+                        <div class="category_product">
+                            <h5>Categoria</h5>
+                            <div class="check_product">
+                                <input type="checkbox" name="anime" id="anime" value="anime"><span class="textContent_check">Anime</span>
+                            </div>
+                            <div class="check_product">
+                                <input type="checkbox" name="phonk" id="phonk" value="phonk"><span class="textContent_check">Phonk</span>
+                            </div>
+                            <div class="check_product">
+                                <input type="checkbox" name="autos" id="autos" value="autos"><span class="textContent_check">Autos</span>
+                            </div>
+                            <div class="check_product">
+                                <input type="checkbox" name="motos" id="motos" value="motos"><span class="textContent_check">Motos</span>
+                            </div>
+                            <div class="check_product">
+                                <input type="checkbox" name="japon" id="japon" value="japon"><span class="textContent_check">Japón</span>
+                            </div>
+                        </div>
+                    </div><!--Fin filtros catalogo-->
+   
+                    <div class="col-10 catalog d-flex">
+                        <div class="row catalog_products row-cols-2" id="catalog_products">
+                        </div>
+                    </div>
+                    <div class="buttonVerMas">
+                        <button class="btn" id="verMasButton">Ver más</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="row footer">
+                <div class="col-md-6">
+                    <div class="method-pay">
+                        <img src="icons/MasterCad.svg" alt="MasterCad">
+                        <img src="icons/Nequi.svg" alt="Nequi">
+                        <img src="icons/Paypal.svg" alt="Paypal">
+                        <img src="icons/Visa.svg" alt="Visa">
+                    </div>
+                    <div class="policies">
+                        <p>
+                            <a href="#">Privacidad y protección de datos</a>
+                            <span>|</span>
+                            <a href="#">Condiciones de uso</a>
+                            <span>|</span>
+                            <a href="#">Politica de cookies</a>
+                        <p class="copy">
+                            <span>
+                                &copy; 2024 Todos los derechos reservados <a href="https://github.com/OwerAndres">Ower
+                                    Castrillón</a>
+                            </span>
+                        </p>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex">
+                    <div class="help">
+                        <h5>Ayuda</h5>
+                        <a href="#">Contáctenos</a>
+                        <a href="#">Preguntas frecuentes</a>
+                        <a href="#">Sobre nosotros</a>
+                    </div>
+                    <div class="information">
+                        <h5>Información</h5>
+                        <p class="instagram">
+                            <img src="icons/Instagram Circle.svg" alt="Instagram">
+                            <a
+                                href="https://www.instagram.com/jadema.store?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Jadema</a>
+                        </p>
+                        <p class="whatsapp">
+                            <img src="icons/whatsapp.svg" alt="whatsapp">
+                            <span>+57 301 258 55 39</span>
+                        </p>
+                    </div>
+                </div>
+            </div><!--Fin footer--> 
+        </div>
+    </div>
+    <!--Script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="JS/catalogo.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Icon logo-->
+    <link rel="icon" href="img/JademaIcon.png" type="image/x-icon">
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!--Fonts Mogran-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" rel="stylesheet">
+
+    <!--Fonts Monomaniac One-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mogra&family=Monomaniac+One&display=swap" rel="stylesheet">
+
+    <!--Fonts inter-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mogra&family=Monomaniac+One&display=swap"
+        rel="stylesheet">
+
+    <!--Styles-->
+    <link rel="stylesheet" href="Styles/styles.css">
+
+    <title>Registro</title>
+</head>
+<body>
+    <div class="container">
+        <header class="container_header">
+            <nav class="header_nav navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/JademaIcon.png" alt="Logo" width="35" height="35"
+                            class="d-inline-block align-top">
+                        <p class="d-inline-block nav_logo_name">Jadema</p>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="icons/Search.svg" alt="Buscador" width="25" height="25"
+                                        class="d-inline-block align-top nav_search">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <span class="nav-link">|</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="icons/Carrito.svg" alt="Carrito" width="25" height="25"
+                                        class="d-inline-block align-top">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <span class="nav-link">|</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" id="initSesion">
+                                    <img src="icons/Register.svg" alt="Usuario" width="25" height="25"
+                                        class="d-inline-block align-top">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav><!--fin de header_nav-->
+        </header><!--Fin div.Container_header-->
+
+        <div class="content m-2">
+            <div class="register">
+                <div class="row">
+                    <div class="col-7 register_form">
+                        <h5 class="register_title">Crea tu cuenta en jadema</h5>
+                        <form action="php/registro.php" id="form_register" method="POST">
+                            <div class="row">
+                                <div class="col-6 d-flex justify-content-left">
+                                    <div class="form-group">
+                                        <input type="text" name="nombre" id="nombre" required>
+                                        <label for="nombre">Nombre<span class="important">*</span></label>
+                                    </div>
+                                </div>
+                                <div class="col-6 d-flex justify-content-left">
+                                    <div class="form-group">
+                                        <input type="text" name="apellido" id="apellido" required>
+                                        <label for="apellido">Apellido<span class="important">*</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 d-flex justify-content-left">
+                                    <div class="form-group">
+                                        <input type="text" name="apellido2" id="apellido2">
+                                        <label for="apellido2">Segundo Apellido</label>
+                                    </div>
+                                </div>
+                                <div class="col-6 d-flex justify-content-left">
+                                    <div class="form-group">
+                                        <input type="tel" name="telefono" id="telefono" placeholder="example: 3159876485" required>
+                                        <label for="telefono">teléfono<span class="important">*</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 d-flex justify-content-left">
+                                    <div class="form-group form-group-correo">
+                                        <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
+                                        <label for="correo">Correo<span class="important">*</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 d-flex justify-content-left">
+                                    <div class="form-group form-group-user">
+                                        <input type="text" name="user" id="user" required>
+                                        <label for="user">Usuario<span class="important">*</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 d-flex justify-content-left">
+                                    <div class="form-group">
+                                        <input type="password" name="passwordR" id="passwordR" placeholder="contraseña 8 caracteres mínimo" required>
+                                        <span class="viewPassword" id="viewPassword"><img class="eyeIcon" id="eyeIcon" src="icons/icons8-invisible-32.svg" alt="eye icon"></span>
+                                        <label for="password">Contraseña<span class="important">*</span></label>
+                                    </div>
+                                </div>
+                                <div class="col-6 d-flex justify-content-left">
+                                    <div class="form-group">
+                                        <input type="password" name="password2R" id="password2R" placeholder="contraseña 8 caracteres mínimo" required>
+                                        <label for="password2">Repite tu contraseña<span class="important">*</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="privacity_polite">
+                                <a href="#">Politica de Privacidad</a>
+                            </div>
+                            <div class="requisitPassword">
+                                <p>
+                                    - 8 carácteres mínimo máximo 12<br>
+                                    - Mayúsculas y minúsculas<br>
+                                    - Almenos un caracter especial<br>
+                                    - Almenos un numero
+                                </p>                                      
+                            </div>
+                            <input type="submit" value="Crear cuenta" class="btn">
+                        </form>
+                    </div><!--Fin register_form-->
+
+                    <div class="col-4 login_sesion">
+                        <h5 class="login_title">Iniciar sesión</h5>
+                        <div class="sesion_buttons">
+                            <button class="btn btnGoogle"><img src="icons/Google__G__logo 1.svg" alt="icon google">Iniciar sesión
+                                con google</button>
+                            <button class="btn btnFacebook"><img src="icons/icon_facebook.svg" alt="icon facebook">Iniciar sesión
+                                con facebook</button>
+                        </div>
+                        <div class="sesion_options">
+                            <div class="line"></div>
+                        </div>
+                     <div class="sesion_form">
+                            <form action="#" method="POST">
+                                <div class="form-group">
+                                    <input type="email" name="emailLogin" id="emailLogin" required>
+                                    <label for="emailLogin">Correo</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="passwordLogin" id="passwordLogin" required>
+                                    <label for="passwordLogin">Contraseña</label>
+                                </div>
+                                <input type="submit" value="Inciar sesión" class="btn">
+                            </form>
+                        </div>
+                    </div><!--fin login_sesion-->
+                </div>
+            </div><!--fin de register-->
+
+            <div class="row footer">
+                <div class="col-md-6">
+                    <div class="method-pay">
+                        <img src="icons/MasterCad.svg" alt="MasterCad">
+                        <img src="icons/Nequi.svg" alt="Nequi">
+                        <img src="icons/Paypal.svg" alt="Paypal">
+                        <img src="icons/Visa.svg" alt="Visa">
+                    </div>
+                    <div class="policies">
+                        <p>
+                            <a href="#">Privacidad y protección de datos</a>
+                            <span>|</span>
+                            <a href="#">Condiciones de uso</a>
+                            <span>|</span>
+                            <a href="#">Politica de cookies</a>
+                        <p class="copy">
+                            <span>
+                                &copy; 2024 Todos los derechos reservados <a href="https://github.com/OwerAndres">Ower
+                                    Castrillón</a>
+                            </span>
+                        </p>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex">
+                    <div class="help">
+                        <h5>Ayuda</h5>
+                        <a href="#">Contáctenos</a>
+                        <a href="#">Preguntas frecuentes</a>
+                        <a href="#">Sobre nosotros</a>
+                    </div>
+                    <div class="information">
+                        <h5>Información</h5>
+                        <p class="instagram">
+                            <img src="icons/Instagram Circle.svg" alt="Instagram">
+                            <a
+                                href="https://www.instagram.com/jadema.store?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Jadema</a>
+                        </p>
+                        <p class="whatsapp">
+                            <img src="icons/whatsapp.svg" alt="whatsapp">
+                            <span>+57 301 258 55 39</span>
+                        </p>
+                    </div>
+                </div>
+            </div><!--Fin footer--> 
+        </div><!--fin de content-->
+    </div><!--fin de container-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="JS/index.js"></script>
+    <script src="JS/function.js"></script>
+    <script src="JS/register.js"></script>
+</body>
+</html>
