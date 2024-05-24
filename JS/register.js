@@ -47,3 +47,19 @@ document.getElementById('form_register').addEventListener('submit', function(eve
         this.submit();  
     }
 });
+
+
+
+function verPassword() {
+    let input = document.getElementById("passwordR");
+    if(input.type == "password"){
+        input.type = "text";
+    }else{
+        input.type = "password";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    let icon = document.getElementById("viewPassword");
+    icon.addEventListener("click", verPassword);
+});
